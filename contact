@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Contact Settlinks — book a free discovery call or send us your expansion plans. We respond within one business day.">
+<title>Contact Us — Settlinks</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.info-block{display:flex;gap:18px;align-items:flex-start;padding:24px;background:var(--white);border:1px solid var(--fog);border-radius:var(--radius-md);transition:all var(--tr)}
+.info-block:hover{border-color:var(--amber-lt);box-shadow:var(--shadow-sm)}
+.info-icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,rgba(232,144,58,.15),rgba(232,144,58,.05));border:1px solid rgba(232,144,58,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-icon svg{width:20px;height:20px;fill:none;stroke:var(--amber);stroke-width:1.8}
+.info-block h4{font-size:.88rem;margin-bottom:4px}
+.info-block p,.info-block a{font-size:.88rem;color:var(--steel-2);max-width:none}
+.info-block a{color:var(--amber);transition:opacity var(--tr)}
+.info-block a:hover{opacity:.8}
+.form-card{background:var(--white);border:1px solid var(--fog);border-radius:var(--radius-lg);padding:48px;box-shadow:var(--shadow-md)}
+.form-card h2{margin-bottom:8px}
+.form-card>p{margin-bottom:32px;font-size:.92rem}
+.office-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.office-card{background:var(--ink-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-md);padding:24px}
+.office-card h4{color:white;font-size:.9rem;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.office-card p{color:var(--mist);font-size:.82rem;max-width:none;line-height:1.6}
+@media(max-width:1024px){.contact-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.form-card{padding:28px}.office-cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary btn--sm nav-cta">Get Started</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="nav-drawer" class="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="case-studies.html">Case Studies</a><a href="partners.html">Partners</a><a href="blog.html">Blog</a>
+  <a href="contact.html" class="btn btn--primary drawer-cta">Get Started →</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</div>
+    <div class="label">Get In Touch</div>
+    <h1>Let's Talk About Your Mexico Expansion</h1>
+    <p>Fill out the form below and a Settlinks team member will respond within one business day. No pitch decks required — just tell us where you are and where you want to go.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: Info blocks -->
+      <div class="contact-info reveal">
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+14165550123">+1 (416) 555-0123</a>
+            <p style="margin-top:2px">Mon–Fri, 8am–6pm EST</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:hello@settlinks.com">hello@settlinks.com</a>
+            <p style="margin-top:2px">We reply within 1 business day</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+          <div>
+            <h4>Response Time</h4>
+            <p>All inquiries receive a response within <strong>1 business day</strong>. Discovery calls are typically scheduled within 2–3 business days of initial contact.</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div>
+            <h4>Confidentiality</h4>
+            <p>All information shared with Settlinks is treated as strictly confidential. NDAs are available upon request before any detailed discussions.</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 6.9 8 11.7z"/></svg></div>
+          <div>
+            <h4>Our Offices</h4>
+            <div class="office-cards" style="margin-top:10px">
+              <div class="office-card">
+                <h4>🇨🇦 Toronto HQ</h4>
+                <p>123 Bay Street, Suite 400<br>Toronto, ON, M5H 2R3<br>Canada</p>
+              </div>
+              <div class="office-card">
+                <h4>🇲🇽 Monterrey</h4>
+                <p>Av. Insurgentes 450, Piso 8<br>Monterrey, N.L. 64000<br>Mexico</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact form -->
+      <div class="form-card reveal reveal-delay-1">
+        <h2>Send Us a Message</h2>
+        <p>Tell us about your product, your target market in Mexico, and what kind of partnership you're looking for. The more detail you share, the more useful our first conversation will be.</p>
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email *</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="company">Company Name *</label>
+              <input type="text" id="company" name="company" placeholder="Acme Robotics GmbH" required>
+            </div>
+            <div class="form-group">
+              <label for="country">Country of Origin *</label>
+              <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option>Germany</option><option>Japan</option><option>United States</option><option>Canada</option>
+                <option>South Korea</option><option>Italy</option><option>France</option><option>Sweden</option>
+                <option>Netherlands</option><option>Switzerland</option><option>Taiwan</option><option>China</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="product">What do you manufacture? *</label>
+            <input type="text" id="product" name="product" placeholder="e.g. 6-axis collaborative robots for automotive welding" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service of Interest *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Market Entry Advisory</option>
+              <option>Legal &amp; Regulatory Compliance (IMMEX)</option>
+              <option>Site Selection &amp; Facility Setup</option>
+              <option>Venture Capital / Investment</option>
+              <option>Equity Partnership</option>
+              <option>Distribution Channel Development</option>
+              <option>Talent Recruitment &amp; Training</option>
+              <option>Automation Integration</option>
+              <option>Full Partnership (Multiple Services)</option>
+              <option>Not sure yet — need guidance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="revenue">Annual Revenue Range</label>
+            <select id="revenue" name="revenue">
+              <option value="">Prefer not to say</option>
+              <option>Under $1M USD</option>
+              <option>$1M – $5M USD</option>
+              <option>$5M – $20M USD</option>
+              <option>$20M – $100M USD</option>
+              <option>Over $100M USD</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your expansion goals, timeline, and any specific questions about the Mexico market..." required></textarea>
+          </div>
+          <div class="form-group" style="display:flex;align-items:flex-start;gap:12px;margin-bottom:24px">
+            <input type="checkbox" id="consent" name="consent" required style="width:auto;margin-top:3px;flex-shrink:0">
+            <label for="consent" style="font-size:.82rem;color:var(--steel);letter-spacing:0;font-weight:400;cursor:pointer">I agree to Settlinks storing my data and contacting me in relation to my inquiry. View our <a href="legal.html" style="color:var(--amber)">Privacy Policy</a>.</label>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:16px">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div class="form-message"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--tinted">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:48px" class="reveal">
+        <div class="label">Common Questions</div>
+        <h2>Before You Reach Out</h2>
+      </div>
+      <div class="faq-item reveal"><button class="faq-question">Is there a fee for the initial discovery call?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq-answer"><p>No. The initial 30-minute discovery call is completely free and has no obligation attached. We use it to assess mutual fit and give you an honest view of what Mexico market entry looks like for your specific product and situation.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">What information should I prepare before the call?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq-answer"><p>A brief description of your product, your current markets, and your Mexico goals is enough to start. If you have specific questions about IMMEX, site locations, or investment structure, jot them down. We'll guide the conversation — there's no presentation required from you.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Do you work with companies that have no prior Mexico experience?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq-answer"><p>Yes — most of our clients come to us with zero Mexico presence. That's exactly the gap we're designed to fill. Some clients have attempted market entry independently and hit regulatory or cultural walls; others are starting fresh. Both are welcome.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">How quickly can you get back to me?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq-answer"><p>All form submissions and emails are responded to within one business day. For time-sensitive inquiries, call our Toronto office directly at +1 (416) 555-0123 during business hours (8am–6pm EST, Monday to Friday).</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Do you sign NDAs before initial discussions?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button><div class="faq-answer"><p>Yes, absolutely. If you'd like an NDA in place before sharing detailed product or business information, just request one when you reach out and we'll have it signed before any substantive discussions begin.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+        <p>Mexico's premier gateway for foreign industrial automation manufacturers.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Compliance</a></li><li><a href="services.html">Talent Recruitment</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="mailto:hello@settlinks.com">hello@settlinks.com</a></li><li><a href="tel:+14165550123">+1 (416) 555-0123</a></li><li><a href="legal.html">Privacy &amp; Legal</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Settlinks Holdings Inc. · Toronto, Canada &amp; Monterrey, Mexico</span>
+      <div><a href="legal.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="legal.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+<script>setupForm('contact-form', '✓ Message received! A Settlinks team member will reply within 1 business day.');</script>
+</body>
+</html>
