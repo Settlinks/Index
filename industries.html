@@ -1,245 +1,269 @@
+cat > /mnt/user-data/outputs/settlinks/industries.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Settlinks serves industrial automation niches in Mexico: robotics, cobots, IoT, predictive maintenance, PLCs, SCADA, automotive, aerospace, and electronics sectors.">
-  <title>Industries — Settlinks</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23e8a020'/><text x='16' y='23' text-anchor='middle' font-size='18' font-weight='900' font-family='sans-serif' fill='%230c0e12'>S</text></svg>">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Industries Settlinks serves — robotics, cobots, IoT, PLCs, SCADA, sensors, and more in Mexico's automotive, aerospace, and electronics sectors.">
+<title>Industries — Settlinks</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.industry-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.ind-card{background:var(--white);border:1px solid var(--fog);border-radius:var(--radius-md);padding:36px 32px;transition:all var(--tr);position:relative;overflow:hidden}
+.ind-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber),var(--teal-lt));transform:scaleX(0);transition:transform var(--tr)}
+.ind-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}.ind-card:hover::after{transform:scaleX(1)}
+.ind-emoji{font-size:2.6rem;margin-bottom:16px;display:block}
+.ind-card h3{margin-bottom:10px}
+.ind-card p{font-size:.9rem;color:var(--steel-2);max-width:none;margin-bottom:16px}
+.ind-bullets{list-style:none;display:flex;flex-direction:column;gap:6px}
+.ind-bullets li{font-size:.82rem;color:var(--steel);display:flex;align-items:center;gap:8px}
+.ind-bullets li::before{content:'→';color:var(--amber);font-family:var(--font-display);font-weight:700}
+.sector-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.sector-card{background:var(--ink-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-md);padding:32px;transition:all var(--tr)}
+.sector-card:hover{border-color:var(--amber);transform:translateY(-3px)}
+.sector-flag{font-size:2rem;margin-bottom:14px;display:block}
+.sector-card h3{color:white;margin-bottom:10px}
+.sector-card p{color:var(--mist);font-size:.88rem;max-width:none}
+.sector-stat{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:rgba(232,144,58,.1);border:1px solid rgba(232,144,58,.25);border-radius:100px;padding:4px 12px;font-family:var(--font-display);font-size:.75rem;font-weight:600;color:var(--amber)}
+@media(max-width:1024px){.industry-hero-grid,.sector-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.industry-hero-grid,.sector-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-
-<nav id="nav">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 28 28" fill="none"><rect x="2" y="12" width="8" height="14" rx="1.5" fill="#e8a020"/><rect x="12" y="6" width="8" height="20" rx="1.5" fill="#e8a020" opacity=".7"/><rect x="22" y="2" width="4" height="24" rx="1.5" fill="#e8a020" opacity=".4"/></svg>
-      SETT<span>LINKS</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="case_studies.html">Case Studies</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="partners.html">Partners</a></li>
-      <li class="nav-cta"><a href="contact.html">Get Started</a></li>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li>
     </ul>
+    <a href="contact.html" class="btn btn--primary btn--sm nav-cta">Get Started</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
-
-<div class="page-hero page-top" data-label="INDUSTRIES">
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Industries</span></div>
-    <div class="section-marker"><span class="label">Our Focus</span></div>
-    <h1>Industrial Automation<br><span class="text-amber">Niches We Serve</span></h1>
-    <p style="max-width:580px;margin-top:16px;font-size:1.05rem;">We specialize exclusively in industrial automation — helping manufacturers of robots, sensors, control systems, and smart factory solutions establish a powerful presence in Mexico.</p>
-  </div>
+<div id="nav-drawer" class="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="case-studies.html">Case Studies</a><a href="partners.html">Partners</a><a href="blog.html">Blog</a>
+  <a href="contact.html" class="btn btn--primary drawer-cta">Get Started →</a>
 </div>
 
-<!-- WHY AUTOMATION IN MEXICO -->
-<section class="section section-alt">
+<div class="page-hero">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
-      <div class="reveal">
-        <div class="section-marker"><span class="label">The Opportunity</span></div>
-        <h2>Mexico's Industrial Automation Market is Accelerating</h2>
-        <p class="mt-16">Mexico's $500B+ manufacturing sector is undergoing rapid Industry 4.0 transformation. Automotive OEMs, aerospace primes, and electronics manufacturers are all demanding smarter, more connected production lines — and they need international technology partners to deliver it.</p>
-        <p class="mt-16">With USMCA reshoring trends pulling supply chains back to North America, the window to establish distribution and manufacturing presence in Mexico has never been more favorable.</p>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div style="display:flex;flex-direction:column;gap:16px;">
-          <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Automotive Sector</span>
-            <span style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--amber);">#1</span>
-          </div>
-          <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Robot Density Growth</span>
-            <span style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--amber);">+28%</span>
-          </div>
-          <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Nearshoring Projects (2025)</span>
-            <span style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--amber);">400+</span>
-          </div>
-          <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Engineering Graduates/Year</span>
-            <span style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--amber);">120K+</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Industries</div>
+    <div class="label">Our Focus</div>
+    <h1>Industrial Automation — Every Niche, Every Layer</h1>
+    <p>We specialize exclusively in industrial automation. From robotics and cobots to PLCs, sensors, and AI-driven maintenance — we know the technology and the market.</p>
   </div>
-</section>
+</div>
 
 <!-- AUTOMATION NICHES -->
 <section class="section">
   <div class="container">
-    <div class="section-marker reveal"><span class="label">Technology Niches</span></div>
-    <h2 class="reveal mb-40">Automation Categories<br>We Specialize In</h2>
-
-    <div class="grid-3" style="gap:28px;">
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:2rem;">🤖</div>
+    <div style="max-width:640px;margin-bottom:56px" class="reveal">
+      <div class="label">Technology Niches</div>
+      <h2>The Automation Segments We Serve</h2>
+      <p>Every niche in industrial automation has different buyers, regulatory considerations, and integration requirements in Mexico. Our expertise spans the full stack.</p>
+    </div>
+    <div class="industry-hero-grid">
+      <div class="ind-card reveal">
+        <span class="ind-emoji">🤖</span>
         <h3>Robotics &amp; Cobots</h3>
-        <p class="mt-16">Support for collaborative robot manufacturers entering Mexico's assembly-intensive automotive and electronics factories. We facilitate facility setup, integration support, and distribution into Tier 1 OEM supply chains.</p>
-        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <div class="label mb-8" style="font-size:0.7rem;">Key End Markets</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;">
-            <span class="tag">Automotive</span>
-            <span class="tag">Electronics</span>
-            <span class="tag">Aerospace</span>
-          </div>
-        </div>
+        <p>From traditional industrial robots to the latest collaborative robot platforms. Mexico's automotive sector is one of the fastest-growing cobot markets globally.</p>
+        <ul class="ind-bullets">
+          <li>Assembly line integration</li>
+          <li>Pick-and-place systems</li>
+          <li>Welding &amp; painting automation</li>
+          <li>Collaborative human-robot workstations</li>
+          <li>Safety certification support (CE, UL)</li>
+        </ul>
       </div>
-
-      <div class="card reveal reveal-delay-1">
-        <div class="card-icon" style="font-size:2rem;">📡</div>
-        <h3>IoT &amp; Predictive Maintenance</h3>
-        <p class="mt-16">Integration of smart sensor networks and AI-driven predictive maintenance platforms. Mexico's manufacturing sector increasingly demands real-time OEE monitoring, machine health data, and digital twin capabilities.</p>
-        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <div class="label mb-8" style="font-size:0.7rem;">Key End Markets</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;">
-            <span class="tag">Heavy Industry</span>
-            <span class="tag">Auto Assembly</span>
-            <span class="tag">Food &amp; Bev</span>
-          </div>
-        </div>
+      <div class="ind-card reveal reveal-delay-1">
+        <span class="ind-emoji">📡</span>
+        <h3>IoT &amp; Smart Sensors</h3>
+        <p>Industrial IoT hardware and sensor manufacturers benefit enormously from Mexico's electronics manufacturing base and proximity to US design centers.</p>
+        <ul class="ind-bullets">
+          <li>Vibration &amp; temperature sensors</li>
+          <li>Machine vision systems</li>
+          <li>Industrial gateway devices</li>
+          <li>RFID and asset tracking</li>
+          <li>Edge computing hardware</li>
+        </ul>
       </div>
-
-      <div class="card reveal reveal-delay-2">
-        <div class="card-icon" style="font-size:2rem;">🖥️</div>
+      <div class="ind-card reveal reveal-delay-2">
+        <span class="ind-emoji">🖥️</span>
         <h3>PLCs &amp; SCADA Systems</h3>
-        <p class="mt-16">Expansion services for control software and hardware providers. We handle IMMEX compliance, distribution agreements, and local technical support infrastructure for PLC and SCADA deployments across industrial sectors.</p>
-        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <div class="label mb-8" style="font-size:0.7rem;">Key End Markets</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;">
-            <span class="tag">Oil &amp; Gas</span>
-            <span class="tag">Utilities</span>
-            <span class="tag">Manufacturing</span>
-          </div>
-        </div>
+        <p>Control system manufacturers face a large and underserved replacement cycle across Mexico's aging manufacturing infrastructure — a significant distribution opportunity.</p>
+        <ul class="ind-bullets">
+          <li>PLC hardware &amp; software</li>
+          <li>HMI panels &amp; interfaces</li>
+          <li>SCADA platforms</li>
+          <li>Industrial networking (EtherNet/IP, Profinet)</li>
+          <li>Motion control systems</li>
+        </ul>
       </div>
-
-      <div class="card reveal">
-        <div class="card-icon" style="font-size:2rem;">🏗️</div>
-        <h3>Automated Material Handling</h3>
-        <p class="mt-16">Conveyor systems, AGVs, AMRs, and warehouse automation solutions for distribution centers and manufacturing floors. Mexico's booming logistics sector is a high-demand channel for material handling automation.</p>
-        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <div class="label mb-8" style="font-size:0.7rem;">Key End Markets</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;">
-            <span class="tag">Logistics</span>
-            <span class="tag">E-Commerce</span>
-            <span class="tag">3PL</span>
-          </div>
-        </div>
+      <div class="ind-card reveal">
+        <span class="ind-emoji">🔧</span>
+        <h3>Predictive Maintenance AI</h3>
+        <p>AI-driven maintenance platforms are finding rapid adoption in Mexico's automotive plants, where unplanned downtime costs are extremely high.</p>
+        <ul class="ind-bullets">
+          <li>Condition monitoring software</li>
+          <li>AI anomaly detection platforms</li>
+          <li>OEE optimization systems</li>
+          <li>Maintenance workflow tools</li>
+          <li>Digital twin solutions</li>
+        </ul>
       </div>
-
-      <div class="card reveal reveal-delay-1">
-        <div class="card-icon" style="font-size:2rem;">🔬</div>
-        <h3>Vision Systems &amp; Quality</h3>
-        <p class="mt-16">Machine vision, inline inspection, and AI-powered quality control systems. With tightening automotive OEM quality requirements, vision-based inspection is one of the fastest-growing segments in Mexican manufacturing.</p>
-        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <div class="label mb-8" style="font-size:0.7rem;">Key End Markets</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;">
-            <span class="tag">Automotive QC</span>
-            <span class="tag">Med Devices</span>
-            <span class="tag">Semiconductors</span>
-          </div>
-        </div>
+      <div class="ind-card reveal reveal-delay-1">
+        <span class="ind-emoji">⚡</span>
+        <h3>Power Electronics &amp; Drives</h3>
+        <p>Variable frequency drives, servo systems, and power management equipment have a deep installed base opportunity across Mexico's food, pharma, and automotive sectors.</p>
+        <ul class="ind-bullets">
+          <li>Variable frequency drives (VFDs)</li>
+          <li>Servo drives &amp; motors</li>
+          <li>Power quality equipment</li>
+          <li>UPS &amp; backup systems</li>
+          <li>Energy management platforms</li>
+        </ul>
       </div>
-
-      <div class="card reveal reveal-delay-2">
-        <div class="card-icon" style="font-size:2rem;">⚡</div>
-        <h3>Motion Control &amp; Drives</h3>
-        <p class="mt-16">Servo systems, variable frequency drives, motion controllers, and precision positioning equipment. Essential components for Mexico's CNC machining, metalworking, and precision assembly operations.</p>
-        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <div class="label mb-8" style="font-size:0.7rem;">Key End Markets</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;">
-            <span class="tag">CNC / Machining</span>
-            <span class="tag">Metalworking</span>
-            <span class="tag">Assembly</span>
-          </div>
-        </div>
+      <div class="ind-card reveal reveal-delay-2">
+        <span class="ind-emoji">🏭</span>
+        <h3>Turnkey System Integrators</h3>
+        <p>For manufacturers who provide complete automated production lines or turnkey systems — Mexico's expanding industrial parks offer large greenfield opportunities.</p>
+        <ul class="ind-bullets">
+          <li>Conveyor &amp; material handling</li>
+          <li>Automated inspection lines</li>
+          <li>End-of-line packaging systems</li>
+          <li>Clean room automation</li>
+          <li>Pharma &amp; food-grade systems</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- END MARKETS -->
-<section class="section section-dark">
+<!-- END-USER SECTORS -->
+<section class="section section--steel">
   <div class="container">
-    <div class="section-marker reveal"><span class="label">End Markets</span></div>
-    <h2 class="reveal mb-40">Manufacturing Sectors<br>We're Connected To</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="reveal">
-      <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:28px;display:flex;gap:16px;align-items:flex-start;">
-        <span style="font-size:1.8rem;">🚗</span>
-        <div>
-          <strong style="font-family:var(--font-ui);display:block;margin-bottom:6px;">Automotive</strong>
-          <p style="font-size:0.875rem;">Mexico is the 4th largest auto producer globally. OEMs like GM, Ford, BMW, and VW all have major assembly operations requiring automation technology partners.</p>
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px" class="reveal">
+      <div class="label" style="color:var(--amber-lt);justify-content:center">End-User Markets</div>
+      <h2 style="color:white">Where Your Technology Gets Deployed</h2>
+      <p style="color:var(--mist);max-width:none">Mexico's industrial automation demand is concentrated in four high-growth manufacturing sectors — all undergoing rapid modernization.</p>
+    </div>
+    <div class="sector-grid">
+      <div class="sector-card reveal">
+        <span class="sector-flag">🚗</span>
+        <h3>Automotive</h3>
+        <p>Mexico is the 7th largest vehicle producer globally. Tier-1 and Tier-2 suppliers concentrated in Monterrey, Saltillo, San Luis Potosí, and Aguascalientes are undergoing intensive automation upgrades to meet EV production demands.</p>
+        <div class="sector-stat">Largest automation buyer in Mexico</div>
+      </div>
+      <div class="sector-card reveal reveal-delay-1">
+        <span class="sector-flag">✈️</span>
+        <h3>Aerospace</h3>
+        <p>Mexico's aerospace cluster — particularly in Querétaro, Baja California, and Sonora — is expanding rapidly. AS9100-compliant automation for precision machining, composites, and avionics assembly is in high demand.</p>
+        <div class="sector-stat">400+ aerospace companies in MX</div>
+      </div>
+      <div class="sector-card reveal reveal-delay-2">
+        <span class="sector-flag">📱</span>
+        <h3>Electronics</h3>
+        <p>Consumer electronics, EV batteries, and industrial electronics manufacturing is growing in Tijuana, Juárez, and Monterrey. SMT automation, vision inspection, and test &amp; measurement equipment have strong demand.</p>
+        <div class="sector-stat">2nd largest electronics exporter to USA</div>
+      </div>
+      <div class="sector-card reveal">
+        <span class="sector-flag">💊</span>
+        <h3>Pharmaceutical</h3>
+        <p>Mexico's pharma sector — centered in CDMX and Jalisco — is modernizing production lines to meet FDA and COFEPRIS standards. Serialization, clean room robotics, and automated inspection systems are priority investments.</p>
+        <div class="sector-stat">$15B+ pharma market</div>
+      </div>
+      <div class="sector-card reveal reveal-delay-1">
+        <span class="sector-flag">🥫</span>
+        <h3>Food &amp; Beverage</h3>
+        <p>One of Mexico's largest manufacturing sectors, with growing demand for automated packaging, filling, and palletizing solutions. FSMA and NOM-251 compliance drives automation investment in medium and large producers.</p>
+        <div class="sector-stat">$120B+ food processing sector</div>
+      </div>
+      <div class="sector-card reveal reveal-delay-2">
+        <span class="sector-flag">⚙️</span>
+        <h3>Metal &amp; Heavy Industry</h3>
+        <p>Steel, aluminum, and heavy fabrication facilities across Coahuila, Nuevo León, and Tamaulipas are investing in automated welding, CNC, and quality inspection systems to serve the automotive and construction markets.</p>
+        <div class="sector-stat">Major US export supplier</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP CALLOUT -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:64px">
+      <div class="reveal">
+        <div class="label">Key Locations</div>
+        <h2>Mexico's Industrial Automation Belt</h2>
+        <p style="margin-bottom:24px">Industrial automation demand is concentrated along Mexico's northern industrial corridor and key interior manufacturing clusters — all with excellent US border logistics.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--off-white);border-radius:var(--radius-sm)">
+            <span style="font-size:1.4rem">🏙️</span>
+            <div><strong style="font-family:var(--font-display);font-size:.9rem">Monterrey, N.L.</strong><p style="font-size:.83rem;max-width:none;margin-top:2px">Mexico's industrial capital. Automotive, steel, glass, and tech manufacturing hub.</p></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--off-white);border-radius:var(--radius-sm)">
+            <span style="font-size:1.4rem">🏭</span>
+            <div><strong style="font-family:var(--font-display);font-size:.9rem">Querétaro, QRO.</strong><p style="font-size:.83rem;max-width:none;margin-top:2px">Aerospace and advanced manufacturing. Fastest-growing industrial state in Mexico.</p></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--off-white);border-radius:var(--radius-sm)">
+            <span style="font-size:1.4rem">🚢</span>
+            <div><strong style="font-family:var(--font-display);font-size:.9rem">Tijuana &amp; Juárez</strong><p style="font-size:.83rem;max-width:none;margin-top:2px">Border maquiladora zones. Electronics, medical devices, and consumer goods.</p></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--off-white);border-radius:var(--radius-sm)">
+            <span style="font-size:1.4rem">🔋</span>
+            <div><strong style="font-family:var(--font-display);font-size:.9rem">Saltillo &amp; San Luis Potosí</strong><p style="font-size:.83rem;max-width:none;margin-top:2px">Automotive OEM clusters. BMW, GM, Stellantis, and Audi supplier networks.</p></div>
+          </div>
         </div>
       </div>
-      <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:28px;display:flex;gap:16px;align-items:flex-start;">
-        <span style="font-size:1.8rem;">✈️</span>
-        <div>
-          <strong style="font-family:var(--font-ui);display:block;margin-bottom:6px;">Aerospace</strong>
-          <p style="font-size:0.875rem;">Querétaro is a tier-1 aerospace hub, home to Bombardier, Safran, and Honeywell facilities demanding precision automation and quality inspection systems.</p>
-        </div>
-      </div>
-      <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:28px;display:flex;gap:16px;align-items:flex-start;">
-        <span style="font-size:1.8rem;">📱</span>
-        <div>
-          <strong style="font-family:var(--font-ui);display:block;margin-bottom:6px;">Electronics</strong>
-          <p style="font-size:0.875rem;">Guadalajara's "Silicon Valley of Mexico" hosts major electronics contract manufacturers where high-speed assembly and inspection automation is essential.</p>
-        </div>
-      </div>
-      <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:28px;display:flex;gap:16px;align-items:flex-start;">
-        <span style="font-size:1.8rem;">🏥</span>
-        <div>
-          <strong style="font-family:var(--font-ui);display:block;margin-bottom:6px;">Medical Devices</strong>
-          <p style="font-size:0.875rem;">Mexico is a top-5 medical device exporter to the US. Cleanroom automation, vision inspection, and traceability systems are high-demand categories.</p>
-        </div>
-      </div>
-      <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:28px;display:flex;gap:16px;align-items:flex-start;">
-        <span style="font-size:1.8rem;">🥩</span>
-        <div>
-          <strong style="font-family:var(--font-ui);display:block;margin-bottom:6px;">Food &amp; Beverage</strong>
-          <p style="font-size:0.875rem;">Hygienic packaging, sorting, and processing automation for one of Mexico's largest and fastest-growing industrial sectors, with strong US export demand.</p>
-        </div>
-      </div>
-      <div style="background:var(--plate);border:1px solid var(--border);border-radius:10px;padding:28px;display:flex;gap:16px;align-items:flex-start;">
-        <span style="font-size:1.8rem;">🛢️</span>
-        <div>
-          <strong style="font-family:var(--font-ui);display:block;margin-bottom:6px;">Oil, Gas &amp; Energy</strong>
-          <p style="font-size:0.875rem;">SCADA, control systems, and process automation for Pemex infrastructure and the growing renewable energy sector across northern and central Mexico.</p>
+      <div class="reveal reveal-delay-1">
+        <div class="map-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="font-family:var(--font-display);font-size:.85rem;font-weight:600">Mexico Industrial Map</span>
+          <span style="font-size:.78rem">Embed your Google Maps API key in contact.html</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section style="background:var(--amber);padding:72px 0;">
-  <div class="container text-center">
-    <h2 style="color:var(--ink);" class="reveal">Your technology. Mexico's market.</h2>
-    <p style="color:rgba(12,14,18,0.7);max-width:480px;margin:16px auto 36px;font-weight:400;" class="reveal reveal-delay-1">Tell us what you manufacture and we'll map the opportunity.</p>
-    <a href="contact.html" class="btn reveal reveal-delay-2" style="background:var(--ink);color:var(--amber);">Start the Conversation ›</a>
+<section class="section section--tinted">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <div class="label" style="color:rgba(255,255,255,.8)">Is Your Niche Here?</div>
+        <h2>Don't See Your Exact Segment?</h2>
+        <p>We evaluate every opportunity individually. If you manufacture industrial automation equipment and want to enter Mexico, let's talk — even if your niche isn't listed above.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn--dark">Discuss Your Niche</a>
+        <a href="services.html" class="btn btn--outline">Our Services</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer>
+<footer id="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a class="footer-logo" href="index.html">SETT<span>LINKS</span></a><p class="footer-desc">Bridging global industrial automation innovators with Mexico's manufacturing ecosystem.</p><div class="social-links"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Twitter">𝕏</a><a href="#" aria-label="Email">✉</a></div></div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li><li><a href="legal.html">Legal &amp; Privacy</a></li></ul></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Representation</a></li><li><a href="services.html">Automation Integration</a></li></ul></div>
-      <div class="footer-col"><h5>Resources</h5><ul><li><a href="industries.html">Industries</a></li><li><a href="case_studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#faq">FAQs</a></li></ul></div>
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+        <p>Mexico's premier gateway for foreign industrial automation manufacturers.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Compliance</a></li><li><a href="services.html">Talent Recruitment</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="mailto:hello@settlinks.com">hello@settlinks.com</a></li><li><a href="tel:+14165550123">+1 (416) 555-0123</a></li><li><a href="legal.html">Privacy &amp; Legal</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Settlinks Holdings. All rights reserved.</span><span>Toronto, ON · Mexico Operations</span><a href="legal.html" style="color:var(--muted);">Privacy &amp; Legal</a></div>
+    <div class="footer-bottom">
+      <span>© 2026 Settlinks Holdings Inc. · Toronto, Canada &amp; Monterrey, Mexico</span>
+      <div><a href="legal.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="legal.html">Terms</a></div>
+    </div>
   </div>
 </footer>
-<div id="toast"></div>
-<script src="main.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
+EOF
+echo "industries done"
