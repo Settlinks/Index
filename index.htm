@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settlinks - Your Partner for Expansion in Mexico</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
+        header { background: #007bff; color: white; padding: 20px; text-align: center; }
+        .hero { background: #f8f9fa; padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .hero p { font-size: 1.2em; }
+        .section { padding: 40px 20px; max-width: 1200px; margin: auto; }
+        .services { display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .service { flex: 1; min-width: 250px; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; }
+        form { max-width: 600px; margin: auto; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        footer { background: #333; color: white; text-align: center; padding: 10px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2em; } .services { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Settlinks</h2>
+        <nav>
+            <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
+            <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">About</a>
+            <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">Services</a>
+            <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Expand Your Industrial Automation Business in Mexico with Settlinks</h1>
+        <p>We partner with foreign manufacturers to establish distribution channels, provide venture capital, and act as shareholders or legal representatives for seamless growth.</p>
+        <button onclick="document.getElementById('contact').scrollIntoView();">Get Started</button>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Settlinks</h2>
+        <p>Settlinks is a holdings company dedicated to bridging foreign manufacturers in the industrial automation industry with opportunities in Mexico. We focus on helping you expand operations, find new distribution partners, and navigate legal landscapes through strategic partnerships.</p>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Partnership as Shareholder</h3>
+                <p>We invest equity in your Mexican ventures for shared success in automation tech expansion.</p>
+            </div>
+            <div class="service">
+                <h3>Venture Capital</h3>
+                <p>Funding tailored for industrial automation firms entering Mexico's manufacturing ecosystem.</p>
+            </div>
+            <div class="service">
+                <h3>Legal Representation</h3>
+                <p>Expert guidance on regulations, IMMEX setup, and distribution channel establishment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <form action="YOUR_APPS_SCRIPT_URL" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="company" placeholder="Company Name" required>
+            <textarea name="message" placeholder="Tell us about your expansion plans" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Settlinks. All rights reserved.</p>
+    </footer>
+</body>
+</html>
