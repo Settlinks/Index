@@ -1,173 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Settlinks strategic partners: Prodensa, NovaLink, Co-Production International, and Innovative Automation — a network built for industrial automation expansion in Mexico.">
-  <title>Partners — Settlinks</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23e8a020'/><text x='16' y='23' text-anchor='middle' font-size='18' font-weight='900' font-family='sans-serif' fill='%230c0e12'>S</text></svg>">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Settlinks partners — industrial parks, legal firms, talent networks, and technology alliances supporting your Mexico expansion.">
+<title>Partners — Settlinks</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.partner-category{margin-bottom:64px}
+.partner-category h3{font-size:1.1rem;margin-bottom:8px}
+.partner-category>p{font-size:.9rem;margin-bottom:28px}
+.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.p-logo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px 16px;border:1px solid var(--fog);border-radius:var(--radius-md);background:var(--white);transition:all var(--tr);text-align:center}
+.p-logo:hover{border-color:var(--amber-lt);box-shadow:var(--shadow-sm);transform:translateY(-3px)}
+.p-logo-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.p-logo span{font-family:var(--font-display);font-size:.82rem;font-weight:700;color:var(--steel)}
+.p-logo small{font-size:.72rem;color:var(--mist)}
+.become-partner{background:var(--off-white);border:2px dashed var(--fog);border-radius:var(--radius-md);padding:40px;text-align:center;transition:all var(--tr)}
+.become-partner:hover{border-color:var(--amber);background:rgba(232,144,58,.04)}
+.become-partner h3{margin-bottom:10px}
+.become-partner p{font-size:.9rem;max-width:48ch;margin:0 auto 20px}
+@media(max-width:768px){.partner-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.partner-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-
-<nav id="nav">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 28 28" fill="none"><rect x="2" y="12" width="8" height="14" rx="1.5" fill="#e8a020"/><rect x="12" y="6" width="8" height="20" rx="1.5" fill="#e8a020" opacity=".7"/><rect x="22" y="2" width="4" height="24" rx="1.5" fill="#e8a020" opacity=".4"/></svg>
-      SETT<span>LINKS</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="case_studies.html">Case Studies</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="partners.html">Partners</a></li>
-      <li class="nav-cta"><a href="contact.html">Get Started</a></li>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li>
     </ul>
+    <a href="contact.html" class="btn btn--primary btn--sm nav-cta">Get Started</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div id="nav-drawer" class="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="case-studies.html">Case Studies</a><a href="partners.html">Partners</a><a href="blog.html">Blog</a>
+  <a href="contact.html" class="btn btn--primary drawer-cta">Get Started →</a>
+</div>
 
-<div class="page-hero page-top" data-label="PARTNERS">
+<div class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Partners</span></div>
-    <div class="section-marker"><span class="label">Our Network</span></div>
-    <h1>A Partner Network<br>Built for <span class="text-amber">Results</span></h1>
-    <p style="max-width:580px;margin-top:16px;font-size:1.05rem;">We collaborate with Mexico's most respected operations, legal, and automation organizations to deliver comprehensive, end-to-end expansion solutions.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Partners</div>
+    <div class="label">Our Network</div>
+    <h1>The Ecosystem Behind Every Successful Expansion</h1>
+    <p>Our partner network spans industrial parks, law firms, universities, freight operators, and technology alliances across Mexico and Canada — built over years of on-the-ground work.</p>
   </div>
 </div>
 
-<!-- PARTNERS GRID -->
 <section class="section">
   <div class="container">
-    <div class="section-marker reveal"><span class="label">Strategic Partners</span></div>
-    <h2 class="reveal mb-40">Organizations We Work With</h2>
 
-    <div class="grid-2" style="gap:28px;">
-
-      <div class="card reveal" style="position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-10px;right:-10px;font-family:'Bebas Neue',sans-serif;font-size:8rem;color:rgba(232,160,32,0.04);line-height:1;pointer-events:none;">P</div>
-        <div style="display:flex;gap:20px;align-items:flex-start;">
-          <div class="partner-initial">P</div>
-          <div>
-            <div class="tag tag-amber mb-8">Operations &amp; Advisory</div>
-            <h3 style="font-size:1.7rem;">Prodensa</h3>
-          </div>
-        </div>
-        <p class="mt-20">One of Mexico's premier shelter services providers, Prodensa offers turnkey manufacturing operations and shelter services that allow foreign companies to operate in Mexico without establishing a legal entity. Their expertise in site selection, HR, accounting, and government relations complements Settlinks' investment and distribution capabilities perfectly.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <span class="tag">Shelter Services</span>
-          <span class="tag">Site Selection</span>
-          <span class="tag">HR &amp; Payroll</span>
-          <span class="tag">Government Relations</span>
-        </div>
+    <!-- Industrial Parks -->
+    <div class="partner-category reveal">
+      <div class="label">Real Estate &amp; Infrastructure</div>
+      <h3>Industrial Park Partners</h3>
+      <p>Certified IMMEX-ready industrial parks across Mexico's key manufacturing corridors. We negotiate preferred lease terms for our clients.</p>
+      <div class="partner-grid">
+        <div class="p-logo"><div class="p-logo-icon" style="background:#eef2ff">🏭</div><span>Parque Industrial Apodaca</span><small>Monterrey, N.L.</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0fff4">🏗️</div><span>Stiva Industrial</span><small>Nuevo León</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fff5f0">⚙️</div><span>Finsa Industrial Parks</span><small>National Network</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0f9ff">🔧</div><span>Vynmsa Industrial</span><small>Monterrey &amp; QRO</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fefce8">🏢</div><span>Prologis Mexico</span><small>Multi-state</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fdf4ff">🏛️</div><span>GreenPark Querétaro</span><small>Querétaro</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0fdf4">🌿</div><span>SLP Industrial Zone</span><small>San Luis Potosí</small></div>
+        <div class="p-logo become-partner" style="padding:16px;border-style:dashed"><span style="color:var(--amber);font-size:.8rem">+ Inquire about a park in your target city</span></div>
       </div>
-
-      <div class="card reveal reveal-delay-1" style="position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-10px;right:-10px;font-family:'Bebas Neue',sans-serif;font-size:8rem;color:rgba(232,160,32,0.04);line-height:1;pointer-events:none;">N</div>
-        <div style="display:flex;gap:20px;align-items:flex-start;">
-          <div class="partner-initial">N</div>
-          <div>
-            <div class="tag tag-amber mb-8">Manufacturing &amp; Supply Chain</div>
-            <h3 style="font-size:1.7rem;">NovaLink</h3>
-          </div>
-        </div>
-        <p class="mt-20">A specialized contract manufacturing and nearshoring solutions provider with deep roots in Mexico's border regions. NovaLink brings exceptional supply chain design capabilities and established relationships with North American logistics providers, enabling faster and more cost-effective component flows for our clients' Mexican operations.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <span class="tag">Contract Manufacturing</span>
-          <span class="tag">Supply Chain Design</span>
-          <span class="tag">Nearshoring</span>
-          <span class="tag">Logistics</span>
-        </div>
-      </div>
-
-      <div class="card reveal" style="position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-10px;right:-10px;font-family:'Bebas Neue',sans-serif;font-size:8rem;color:rgba(232,160,32,0.04);line-height:1;pointer-events:none;">C</div>
-        <div style="display:flex;gap:20px;align-items:flex-start;">
-          <div class="partner-initial">C</div>
-          <div>
-            <div class="tag tag-amber mb-8">Legal &amp; Strategic Partnerships</div>
-            <h3 style="font-size:1.7rem;">Co-Production International</h3>
-          </div>
-        </div>
-        <p class="mt-20">A seasoned cross-border business development and co-production services firm with extensive experience facilitating joint ventures, production-sharing arrangements, and strategic alliances between US/Canadian manufacturers and Mexican operations. Their legal and business structuring expertise is invaluable in complex equity partnership situations.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <span class="tag">Joint Ventures</span>
-          <span class="tag">Business Structuring</span>
-          <span class="tag">Cross-Border Law</span>
-          <span class="tag">Partner Matching</span>
-        </div>
-      </div>
-
-      <div class="card reveal reveal-delay-1" style="position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-10px;right:-10px;font-family:'Bebas Neue',sans-serif;font-size:8rem;color:rgba(232,160,32,0.04);line-height:1;pointer-events:none;">I</div>
-        <div style="display:flex;gap:20px;align-items:flex-start;">
-          <div class="partner-initial">I</div>
-          <div>
-            <div class="tag tag-amber mb-8">Automation Technology</div>
-            <h3 style="font-size:1.7rem;">Innovative Automation</h3>
-          </div>
-        </div>
-        <p class="mt-20">A global automation systems integrator with deep expertise in custom automation platform design, robotics integration, and Industry 4.0 implementation. Innovative Automation provides the technical depth to complement Settlinks' business and legal capabilities, ensuring our clients' automation technology is deployed correctly and performs to specification in Mexican manufacturing environments.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-          <span class="tag">Systems Integration</span>
-          <span class="tag">Robotics</span>
-          <span class="tag">Industry 4.0</span>
-          <span class="tag">Technical Support</span>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Legal -->
+    <div class="partner-category reveal">
+      <div class="label">Legal &amp; Compliance</div>
+      <h3>Legal &amp; Regulatory Partners</h3>
+      <p>Trusted Mexican and Canadian law firms specializing in cross-border manufacturing, IMMEX, foreign investment, and labor law.</p>
+      <div class="partner-grid">
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fff1f2">⚖️</div><span>Garza Treviño &amp; Assoc.</span><small>Monterrey — IMMEX Specialists</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0f9ff">📋</div><span>Basham, Ringe y Correa</span><small>CDMX — Corporate Law</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fefce8">🗂️</div><span>SAT Customs Brokers MX</span><small>National — Trade Compliance</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0fff4">📑</div><span>Bennett Jones LLP</span><small>Toronto — Canada Counsel</small></div>
+      </div>
+    </div>
+
+    <!-- Talent -->
+    <div class="partner-category reveal">
+      <div class="label">Talent &amp; Education</div>
+      <h3>University &amp; Talent Partners</h3>
+      <p>Direct pipelines to STEM graduates and certified automation technicians through relationships with Mexico's top engineering institutions.</p>
+      <div class="partner-grid">
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fff7ed">🎓</div><span>Tecnológico de Monterrey</span><small>Engineering Faculty</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0fdf4">🔬</div><span>UANL Engineering</span><small>Nuevo León</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0f9ff">🛠️</div><span>CONALEP Automation</span><small>Technical Training Network</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fdf4ff">📡</div><span>UP Querétaro</span><small>Mechatronics Program</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fff1f2">💻</div><span>CINVESTAV</span><small>Robotics Research</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fefce8">🤖</div><span>IPN Automation Dept.</span><small>CDMX</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0fff4">⚡</div><span>ITESM Saltillo</span><small>Industrial Engineering</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#eef2ff">🏆</div><span>ManpowerGroup MX</span><small>Technical Recruitment</small></div>
+      </div>
+    </div>
+
+    <!-- Logistics -->
+    <div class="partner-category reveal">
+      <div class="label">Supply Chain</div>
+      <h3>Logistics &amp; Customs Partners</h3>
+      <p>Freight forwarders, customs brokers, and 3PL providers with deep expertise in cross-border industrial equipment movement under IMMEX.</p>
+      <div class="partner-grid">
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fff5f0">🚛</div><span>Kuehne + Nagel MX</span><small>International Freight</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0fdf4">📦</div><span>DHL Supply Chain MX</span><small>3PL &amp; Warehousing</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0f9ff">🛃</div><span>Grupo Logístico Lira</span><small>Customs Brokerage</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fdf4ff">🚢</div><span>Intermodal México</span><small>Rail &amp; Port Logistics</small></div>
+      </div>
+    </div>
+
+    <!-- Technology -->
+    <div class="partner-category reveal">
+      <div class="label">Technology Alliances</div>
+      <h3>Technology &amp; Integration Partners</h3>
+      <p>System integrators, automation technology distributors, and Industry 4.0 platform partners to accelerate deployment for our clients.</p>
+      <div class="partner-grid">
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fff7ed">🤖</div><span>Rockwell Automation MX</span><small>Authorized Partner</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0f9ff">⚙️</div><span>Siemens Mexico</span><small>System Integration</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#f0fff4">📡</div><span>Beckhoff Automation</span><small>IPC &amp; EtherCAT</small></div>
+        <div class="p-logo"><div class="p-logo-icon" style="background:#fefce8">🔗</div><span>Intelitek MX</span><small>Robotics Training</small></div>
+      </div>
+    </div>
+
+    <!-- Become a partner CTA -->
+    <div class="become-partner reveal">
+      <div style="font-size:2rem;margin-bottom:12px">🤝</div>
+      <h3>Become a Settlinks Partner</h3>
+      <p>Are you an industrial park operator, law firm, logistics provider, or technology distributor operating in Mexico? We're always looking to expand our partner network with organizations that share our commitment to quality and client outcomes.</p>
+      <a href="contact.html" class="btn btn--primary">Inquire About Partnership</a>
+    </div>
+
   </div>
 </section>
 
-<!-- BECOME A PARTNER -->
-<section class="section section-dark">
-  <div class="container" style="max-width:800px;margin-inline:auto;">
-    <div class="section-marker reveal" style="justify-content:center;text-align:center;flex-direction:column;align-items:center;">
-      <div style="display:flex;align-items:center;gap:12px;"><span style="display:block;width:40px;height:2px;background:var(--amber);"></span><span class="label">Partner With Us</span></div>
-    </div>
-    <h2 class="reveal text-center mt-16">Become a Settlinks Partner</h2>
-    <p class="mt-16 reveal reveal-delay-1 text-center">Are you a legal firm, operations provider, financial institution, or technology company with complementary services? We're always looking for partners who share our commitment to helping automation manufacturers succeed in Mexico.</p>
-
-    <form data-gas style="margin-top:48px;display:flex;flex-direction:column;gap:0;" class="reveal reveal-delay-2">
-      <input type="hidden" name="form_type" value="partner_inquiry">
-      <div class="grid-2" style="gap:20px;">
-        <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="Full name" required></div>
-        <div class="form-group"><label>Company</label><input type="text" name="company" placeholder="Organization name" required></div>
-        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="Work email" required></div>
-        <div class="form-group"><label>Partnership Type</label>
-          <select name="partnership_type" required>
-            <option value="">Select type…</option>
-            <option value="Legal Services">Legal &amp; Compliance Services</option>
-            <option value="Operations">Operations &amp; Shelter Services</option>
-            <option value="Technology">Automation Technology</option>
-            <option value="Finance">Financial &amp; Investment</option>
-            <option value="Logistics">Logistics &amp; Supply Chain</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group"><label>Tell us about your organization and how you'd like to collaborate</label><textarea name="message" placeholder="Describe your services, target market, and partnership vision…" required></textarea></div>
-      <button type="submit" class="btn btn-primary" style="width:fit-content;align-self:flex-end;">Submit Partnership Inquiry ›</button>
-    </form>
-  </div>
-</section>
-
-<footer>
+<footer id="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a class="footer-logo" href="index.html">SETT<span>LINKS</span></a><p class="footer-desc">Bridging global industrial automation innovators with Mexico's manufacturing ecosystem.</p><div class="social-links"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Twitter">𝕏</a><a href="#" aria-label="Email">✉</a></div></div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li><li><a href="legal.html">Legal &amp; Privacy</a></li></ul></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Representation</a></li><li><a href="services.html">Automation Integration</a></li></ul></div>
-      <div class="footer-col"><h5>Resources</h5><ul><li><a href="industries.html">Industries</a></li><li><a href="case_studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#faq">FAQs</a></li></ul></div>
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+        <p>Mexico's premier gateway for foreign industrial automation manufacturers.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Compliance</a></li><li><a href="services.html">Talent Recruitment</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="mailto:hello@settlinks.com">hello@settlinks.com</a></li><li><a href="tel:+14165550123">+1 (416) 555-0123</a></li><li><a href="legal.html">Privacy &amp; Legal</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Settlinks Holdings. All rights reserved.</span><span>Toronto, ON · Mexico Operations</span><a href="legal.html" style="color:var(--muted);">Privacy &amp; Legal</a></div>
+    <div class="footer-bottom">
+      <span>© 2026 Settlinks Holdings Inc. · Toronto, Canada &amp; Monterrey, Mexico</span>
+      <div><a href="legal.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="legal.html">Terms</a></div>
+    </div>
   </div>
 </footer>
-<div id="toast"></div>
-<script src="main.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
