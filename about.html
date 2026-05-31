@@ -1,135 +1,123 @@
+
+bash
+
+cat > /mnt/user-data/outputs/settlinks/about.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Settlinks – a holdings company bridging foreign industrial automation manufacturers into Mexico through strategic equity partnerships and expert representation.">
-  <title>About — Settlinks</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23e8a020'/><text x='16' y='23' text-anchor='middle' font-size='18' font-weight='900' font-family='sans-serif' fill='%230c0e12'>S</text></svg>">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="About Settlinks — Our mission, team, and story behind Mexico's premier industrial automation market entry firm.">
+<title>About Us — Settlinks</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.mission-block{background:var(--ink);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-md);padding:40px;position:relative;overflow:hidden}
+.mission-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber),var(--teal-lt))}
+.mission-block h3{color:var(--white);margin-bottom:16px}
+.mission-block p{color:var(--mist);max-width:none}
+.value-item{display:flex;gap:20px;align-items:flex-start;padding:28px 0;border-bottom:1px solid var(--fog)}
+.value-item:last-child{border-bottom:none}
+.value-num{font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--amber);opacity:.4;line-height:1;flex-shrink:0;width:48px}
+.value-item h4{margin-bottom:6px}
+.value-item p{font-size:.9rem;max-width:none}
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--amber),var(--teal-lt))}
+.tl-item{position:relative;padding-bottom:40px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-39px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--amber);border:3px solid var(--white);box-shadow:0 0 0 2px var(--amber)}
+.tl-year{font-family:var(--font-display);font-size:.78rem;font-weight:700;color:var(--amber);letter-spacing:.08em;margin-bottom:4px}
+.tl-item h4{margin-bottom:6px}
+.tl-item p{font-size:.88rem;max-width:none}
+@media(max-width:768px){.mission-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-
-<nav id="nav">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="12" width="8" height="14" rx="1.5" fill="#e8a020"/>
-        <rect x="12" y="6" width="8" height="20" rx="1.5" fill="#e8a020" opacity=".7"/>
-        <rect x="22" y="2" width="4" height="24" rx="1.5" fill="#e8a020" opacity=".4"/>
-      </svg>
-      SETT<span>LINKS</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="case_studies.html">Case Studies</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="partners.html">Partners</a></li>
-      <li class="nav-cta"><a href="contact.html">Get Started</a></li>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li>
     </ul>
+    <a href="contact.html" class="btn btn--primary btn--sm nav-cta">Get Started</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div id="nav-drawer" class="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="case-studies.html">Case Studies</a><a href="partners.html">Partners</a><a href="blog.html">Blog</a>
+  <a href="contact.html" class="btn btn--primary drawer-cta">Get Started →</a>
+</div>
 
-<!-- PAGE HERO -->
-<div class="page-hero page-top" data-label="ABOUT">
+<div class="page-hero">
   <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span class="sep">/</span>
-      <span>About</span>
-    </div>
-    <div class="section-marker"><span class="label">Our Story</span></div>
-    <h1>The Bridge Between<br><span class="text-amber">Innovation</span> &amp; Opportunity</h1>
-    <p style="max-width:580px;margin-top:16px;font-size:1.05rem;">Founded in 2024, Settlinks is a holdings company dedicated to making Mexico's industrial automation opportunity accessible to the world's best manufacturers.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>About</div>
+    <div class="label">Our Story</div>
+    <h1>The Bridge Between Global Innovation and Mexico's Industrial Future</h1>
+    <p>Founded in 2024, Settlinks was built on a simple conviction: foreign automation manufacturers deserve a partner who is invested — literally — in their success in Mexico.</p>
   </div>
 </div>
 
 <!-- MISSION / VISION -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;" class="reveal">
-      <div class="card" style="border-left:3px solid var(--amber);">
-        <div class="label mb-16">Our Mission</div>
-        <h3>Connecting Global Innovation to Mexico's Manufacturing Ecosystem</h3>
-        <p class="mt-16">We bridge foreign manufacturers in industrial automation with Mexico's booming market, creating shared value through strategic partnerships, capital deployment, and sustainable long-term expansion.</p>
+    <div class="mission-grid">
+      <div>
+        <div class="label">Who We Are</div>
+        <h2>A Holdings Company Built on Partnership</h2>
+        <p style="margin-bottom:24px">Settlinks is a holdings company specializing in partnering with foreign manufacturers in the industrial automation sector to expand into Mexico's thriving market. Unlike traditional consultancies, we enter every engagement as a stakeholder — as shareholders, venture capitalists, or legal representatives — creating full alignment between our goals and yours.</p>
+        <p>We operate from two offices: Toronto, Canada (where many of our international clients are based) and Monterrey, Mexico (the heart of Mexico's industrial automation belt). This dual presence gives us a unique perspective on both sides of the market.</p>
       </div>
-      <div class="card" style="border-left:3px solid var(--teal);">
-        <div class="label mb-16" style="color:var(--teal);">Our Vision</div>
-        <h3>The Premier Gateway for Industrial Automation in Mexico</h3>
-        <p class="mt-16">To become the definitive partner for foreign firms entering Mexico's manufacturing sector — driving Industry 4.0 adoption, economic growth, and technological advancement across the region.</p>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="mission-block">
+          <h3>🎯 Our Mission</h3>
+          <p>To bridge global innovation in industrial automation with Mexico's manufacturing ecosystem, creating sustainable value through strategic partnerships and equity-aligned growth.</p>
+        </div>
+        <div class="mission-block">
+          <h3>🔭 Our Vision</h3>
+          <p>To become the premier gateway for foreign automation firms entering Mexico, driving Industry 4.0 adoption and measurable economic growth across North America.</p>
+        </div>
+        <div class="mission-block">
+          <h3>⚖️ Our Commitment</h3>
+          <p>We only take on clients where we genuinely believe in the opportunity. When we invest our capital and reputation, we ensure every engagement is built to succeed.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO WE ARE -->
-<section class="section section-alt">
+<!-- CORE VALUES -->
+<section class="section section--tinted">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
-      <div class="reveal">
-        <div class="section-marker"><span class="label">Who We Are</span></div>
-        <h2>A Holdings Company Built for Expansion</h2>
-        <p class="mt-16">Settlinks operates at the intersection of industrial manufacturing, cross-border legal expertise, and venture capital. We don't just advise — we invest alongside you, taking equity positions and acting as committed partners in your Mexican venture.</p>
-        <p class="mt-16">Our founders bring over 20 years of combined experience in nearshoring, Mexico's regulatory environment, and industrial automation deployment across North America and beyond.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px;">
-          <div>
-            <div class="stat-num" style="font-size:2.4rem;">2024</div>
-            <div class="stat-label">Year Founded</div>
-          </div>
-          <div>
-            <div class="stat-num" style="font-size:2.4rem;">3+</div>
-            <div class="stat-label">Countries Served</div>
-          </div>
-          <div>
-            <div class="stat-num" style="font-size:2.4rem;">4+</div>
-            <div class="stat-label">Strategic Partners</div>
-          </div>
-          <div>
-            <div class="stat-num" style="font-size:2.4rem;">100%</div>
-            <div class="stat-label">Industry 4.0 Focused</div>
-          </div>
+    <div style="max-width:600px;margin-bottom:56px" class="reveal">
+      <div class="label">What Drives Us</div>
+      <h2>Our Core Values</h2>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="value-item reveal">
+          <div class="value-num">01</div>
+          <div><h4>Skin in the Game</h4><p>We invest alongside our partners. When we take equity stakes or deploy venture capital, our incentives are perfectly aligned with your success — not just a consulting fee.</p></div>
+        </div>
+        <div class="value-item reveal reveal-delay-1">
+          <div class="value-num">02</div>
+          <div><h4>Radical Transparency</h4><p>Mexico's regulatory landscape has real complexity. We tell you what's hard, what's slow, and what could go wrong — before you commit. No surprises.</p></div>
+        </div>
+        <div class="value-item reveal reveal-delay-2">
+          <div class="value-num">03</div>
+          <div><h4>Long-Term Thinking</h4><p>We don't optimize for the quick win. Every partnership is structured for multi-year growth, with milestone-based investment tied to real operational outcomes.</p></div>
         </div>
       </div>
-      <div class="reveal reveal-delay-1">
-        <div style="background:var(--plate);border:1px solid var(--border);border-radius:16px;padding:40px;position:relative;overflow:hidden;">
-          <div style="position:absolute;bottom:-10px;right:-10px;font-size:9rem;opacity:0.04;font-family:'Bebas Neue',sans-serif;">MX</div>
-          <div class="label mb-24">How We Engage</div>
-          <div style="display:flex;flex-direction:column;gap:20px;">
-            <div style="display:flex;gap:16px;align-items:flex-start;">
-              <div style="width:36px;height:36px;background:rgba(232,160,32,0.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">💰</div>
-              <div>
-                <strong>As Venture Capitalists</strong>
-                <p style="font-size:0.875rem;margin-top:4px;">Providing growth capital tied to production and revenue milestones.</p>
-              </div>
-            </div>
-            <div style="display:flex;gap:16px;align-items:flex-start;">
-              <div style="width:36px;height:36px;background:rgba(232,160,32,0.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🤝</div>
-              <div>
-                <strong>As Shareholders</strong>
-                <p style="font-size:0.875rem;margin-top:4px;">Taking equity in joint ventures to ensure aligned incentives.</p>
-              </div>
-            </div>
-            <div style="display:flex;gap:16px;align-items:flex-start;">
-              <div style="width:36px;height:36px;background:rgba(232,160,32,0.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">⚖️</div>
-              <div>
-                <strong>As Legal Representatives</strong>
-                <p style="font-size:0.875rem;margin-top:4px;">Acting as local legal entity for IMMEX, permits, and compliance.</p>
-              </div>
-            </div>
-            <div style="display:flex;gap:16px;align-items:flex-start;">
-              <div style="width:36px;height:36px;background:rgba(232,160,32,0.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">📡</div>
-              <div>
-                <strong>As Distribution Partners</strong>
-                <p style="font-size:0.875rem;margin-top:4px;">Building channel networks into automotive, aerospace, and electronics OEMs.</p>
-              </div>
-            </div>
-          </div>
+      <div>
+        <div class="value-item reveal">
+          <div class="value-num">04</div>
+          <div><h4>Operational Precision</h4><p>From IMMEX certification to site selection to talent recruitment — we execute with engineering-level rigor. Details matter when crossing borders.</p></div>
+        </div>
+        <div class="value-item reveal reveal-delay-1">
+          <div class="value-num">05</div>
+          <div><h4>Bilateral Expertise</h4><p>Our team operates fluently in both Canadian and Mexican business culture, legal frameworks, and regulatory environments. We're truly bilingual — in language and in business.</p></div>
+        </div>
+        <div class="value-item reveal reveal-delay-2">
+          <div class="value-num">06</div>
+          <div><h4>Industry Specialization</h4><p>We focus exclusively on industrial automation. This isn't a side offering — it's our entire business, which means deeper networks, sharper insight, and better outcomes.</p></div>
         </div>
       </div>
     </div>
@@ -139,66 +127,140 @@
 <!-- TEAM -->
 <section class="section">
   <div class="container">
-    <div class="section-marker reveal"><span class="label">Leadership</span></div>
-    <h2 class="reveal mb-40">The Team Behind Settlinks</h2>
+    <div style="text-align:center;max-width:560px;margin:0 auto 56px" class="reveal">
+      <div class="label">The People</div>
+      <h2>Our Leadership Team</h2>
+      <p style="max-width:none">Operators, lawyers, engineers, and investors — united by a passion for Mexico's industrial future.</p>
+    </div>
     <div class="grid-3">
-      <div class="card reveal text-center">
-        <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--amber-dim),rgba(232,160,32,0.1));border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--amber);">JD</div>
-        <h3 style="font-size:1.5rem;">John Doe</h3>
-        <div class="label mt-8" style="font-size:0.72rem;">Chief Executive Officer</div>
-        <p class="mt-16" style="font-size:0.9rem;">20+ years in nearshoring strategy, venture capital, and cross-border industrial expansion across North America and Europe.</p>
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,var(--amber),var(--amber-dk))">JD</div>
+        <h3>John Doe</h3>
+        <div class="team-role">Chief Executive Officer</div>
+        <p>20+ years in nearshoring and venture capital across North America. Former partner at a Toronto-based VC firm focused on industrial tech. Led over $80M in cross-border investments.</p>
       </div>
-      <div class="card reveal reveal-delay-1 text-center">
-        <div style="width:80px;height:80px;background:linear-gradient(135deg,rgba(26,158,138,0.4),rgba(26,158,138,0.08));border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--teal);">JS</div>
-        <h3 style="font-size:1.5rem;">Jane Smith</h3>
-        <div class="label mt-8" style="font-size:0.72rem;">Director of Legal Affairs</div>
-        <p class="mt-16" style="font-size:0.9rem;">Expert in Mexican commercial law, IMMEX certification, environmental regulation, and foreign direct investment frameworks.</p>
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-avatar" style="background:linear-gradient(135deg,var(--teal),var(--teal-lt))">JS</div>
+        <h3>Jane Smith</h3>
+        <div class="team-role">Legal Director</div>
+        <p>Expert in Mexican commercial law, IMMEX certification, and foreign investment regulations. Previously counsel at a leading Monterrey law firm serving multinational manufacturers for 15 years.</p>
       </div>
-      <div class="card reveal reveal-delay-2 text-center">
-        <div style="width:80px;height:80px;background:linear-gradient(135deg,rgba(100,120,200,0.3),rgba(100,120,200,0.06));border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#8899dd);">MJ</div>
-        <h3 style="font-size:1.5rem;">Mike Johnson</h3>
-        <div class="label mt-8" style="font-size:0.72rem;">Head of Operations</div>
-        <p class="mt-16" style="font-size:0.9rem;">Specialist in automation integration, production line design, PLC/SCADA deployment, and Industry 4.0 systems implementation.</p>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-avatar" style="background:linear-gradient(135deg,var(--steel),var(--steel-2))">MJ</div>
+        <h3>Mike Johnson</h3>
+        <div class="team-role">Head of Operations</div>
+        <p>Industrial automation engineer with hands-on experience deploying PLC, SCADA, and cobot systems in Mexican automotive plants. Specialist in Industry 4.0 integration and supply chain design.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#7b5ea7,#4a90d9)">LR</div>
+        <h3>Laura Reyes</h3>
+        <div class="team-role">Director of Business Development</div>
+        <p>Bilingual (Spanish/English) business development executive with a network spanning Mexico's top automotive OEMs, aerospace tier-1 suppliers, and electronics manufacturers.</p>
+      </div>
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#2d6a4f,#52b788)">AC</div>
+        <h3>Andrés Cruz</h3>
+        <div class="team-role">Investment Analyst</div>
+        <p>CFA charterholder with expertise in structuring cross-border equity deals and venture term sheets. Background in private equity with focus on manufacturing and technology sectors.</p>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#c77dff,#7b2fbe)">YT</div>
+        <h3>Yuki Tanaka</h3>
+        <div class="team-role">Asia-Pacific Liaison</div>
+        <p>Fluent in Japanese, English, and Spanish. Specializes in guiding Asian manufacturers — particularly from Japan and South Korea — through the cultural and regulatory nuances of Mexico market entry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section section--tinted">
+  <div class="container">
+    <div class="grid-2" style="align-items:start">
+      <div class="reveal">
+        <div class="label">Our Journey</div>
+        <h2>Built for This Moment in Manufacturing</h2>
+        <p>The nearshoring wave didn't happen overnight. We spent years building the network, expertise, and legal infrastructure to be ready when the opportunity arrived.</p>
+      </div>
+      <div class="timeline reveal reveal-delay-1">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2021</div>
+          <h4>The Idea Takes Shape</h4>
+          <p>Founders identify a clear gap: foreign automation manufacturers want Mexico access but lack trustworthy, invested partners on the ground.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2022</div>
+          <h4>Network Built in Monterrey</h4>
+          <p>Two years of relationship-building with industrial park operators, IMMEX specialists, and tier-1 automotive suppliers across NL and QRO.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2023</div>
+          <h4>Legal &amp; VC Structure Formed</h4>
+          <p>Settlinks Holdings Inc. incorporated in Toronto. Legal framework for equity partnerships and venture capital deployment established in both jurisdictions.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024</div>
+          <h4>First Partners Onboarded</h4>
+          <p>Official launch. First three clients — from Germany, Japan, and the USA — enter Mexico through Settlinks, covering robotics, IoT sensors, and cobot systems.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2026</div>
+          <h4>30+ Partners &amp; Growing</h4>
+          <p>Active portfolio of 30+ companies across 12 Mexican states. $12M+ in capital deployed. Expanding team to support Asia-Pacific and European client pipelines.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section style="background:var(--amber);padding:72px 0;">
-  <div class="container text-center">
-    <h2 style="color:var(--ink);" class="reveal">Let's build something together</h2>
-    <p style="color:rgba(12,14,18,0.7);max-width:480px;margin:16px auto 36px;font-weight:400;" class="reveal reveal-delay-1">Ready to explore how Settlinks can accelerate your Mexico expansion?</p>
-    <a href="contact.html" class="btn reveal reveal-delay-2" style="background:var(--ink);color:var(--amber);">Get in Touch ›</a>
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <div class="label" style="color:rgba(255,255,255,.8)">Join Our Portfolio</div>
+        <h2>Ready to Meet the Team?</h2>
+        <p>Book a 30-minute discovery call. No pitch decks, just an honest conversation about your expansion goals.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn--dark">Schedule a Call</a>
+        <a href="services.html" class="btn btn--outline">View Services</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<footer id="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="footer-logo" href="index.html">SETT<span>LINKS</span></a>
-        <p class="footer-desc">Bridging global industrial automation innovators with Mexico's thriving manufacturing ecosystem through strategic partnerships, capital, and expert guidance.</p>
-        <div class="social-links">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Twitter">𝕏</a>
-          <a href="#" aria-label="Email">✉</a>
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+        <p>Mexico's premier gateway for foreign industrial automation manufacturers.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
         </div>
       </div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li><li><a href="legal.html">Legal &amp; Privacy</a></li></ul></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Representation</a></li><li><a href="services.html">Automation Integration</a></li></ul></div>
-      <div class="footer-col"><h5>Resources</h5><ul><li><a href="industries.html">Industries</a></li><li><a href="case_studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#faq">FAQs</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Compliance</a></li><li><a href="services.html">Talent Recruitment</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="mailto:hello@settlinks.com">hello@settlinks.com</a></li><li><a href="tel:+14165550123">+1 (416) 555-0123</a></li><li><a href="legal.html">Privacy &amp; Legal</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Settlinks Holdings. All rights reserved.</span>
-      <span>Toronto, ON · Mexico Operations</span>
-      <a href="legal.html" style="color:var(--muted);">Privacy &amp; Legal</a>
+      <span>© 2026 Settlinks Holdings Inc. · Toronto, Canada &amp; Monterrey, Mexico</span>
+      <div><a href="legal.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="legal.html">Terms</a></div>
     </div>
   </div>
 </footer>
-
-<div id="toast"></div>
-<script src="main.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
+EOF
+echo "about.html done"
+Output
+
+about.html done
