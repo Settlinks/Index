@@ -1,178 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Settlinks blog: insights on Mexico nearshoring, industrial automation trends, IMMEX compliance, Industry 4.0, and USMCA strategy.">
-  <title>Blog &amp; Resources — Settlinks</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23e8a020'/><text x='16' y='23' text-anchor='middle' font-size='18' font-weight='900' font-family='sans-serif' fill='%230c0e12'>S</text></svg>">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Settlinks Blog — Insights on nearshoring, IMMEX, industrial automation trends, and Mexico market entry strategy.">
+<title>Blog & Resources — Settlinks</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.blog-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start}
+.main-posts{display:flex;flex-direction:column;gap:32px}
+.featured-post{background:var(--white);border:1px solid var(--fog);border-radius:var(--radius-md);overflow:hidden;transition:all var(--tr)}
+.featured-post:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.featured-thumb{height:260px;background:linear-gradient(135deg,var(--ink-2),var(--steel));display:flex;align-items:center;justify-content:center;position:relative}
+.featured-thumb svg{width:80px;height:80px;opacity:.15;fill:white}
+.featured-thumb .post-tag{top:20px;left:20px}
+.featured-body{padding:32px}
+.featured-body h2{font-size:1.3rem;margin-bottom:10px;line-height:1.3}
+.featured-body h2 a{color:var(--ink);transition:color var(--tr)}
+.featured-body h2 a:hover{color:var(--amber)}
+.featured-body p{font-size:.92rem;color:var(--steel-2);max-width:none}
+.article-card{display:grid;grid-template-columns:160px 1fr;gap:24px;background:var(--white);border:1px solid var(--fog);border-radius:var(--radius-md);overflow:hidden;transition:all var(--tr)}
+.article-card:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px);border-color:var(--amber-lt)}
+.article-thumb-sm{background:linear-gradient(135deg,var(--ink-2),var(--steel-2));display:flex;align-items:center;justify-content:center}
+.article-thumb-sm svg{width:40px;height:40px;opacity:.2;fill:white}
+.article-body{padding:24px 24px 24px 0}
+.article-body h3{font-size:1rem;margin-bottom:8px;line-height:1.3}
+.article-body h3 a{color:var(--ink);transition:color var(--tr)}
+.article-body h3 a:hover{color:var(--amber)}
+.article-body p{font-size:.85rem;color:var(--steel-2);max-width:none}
+/* Sidebar */
+.sidebar{display:flex;flex-direction:column;gap:28px}
+.sidebar-widget{background:var(--white);border:1px solid var(--fog);border-radius:var(--radius-md);padding:28px}
+.sidebar-widget h4{font-family:var(--font-display);font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--fog)}
+.sidebar-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.sidebar-links a{font-size:.88rem;color:var(--steel);transition:color var(--tr);display:flex;align-items:center;gap:8px}
+.sidebar-links a::before{content:'→';color:var(--amber);font-family:var(--font-display);font-weight:700;font-size:.8rem}
+.sidebar-links a:hover{color:var(--amber)}
+.category-tag{display:inline-flex;padding:6px 14px;background:var(--off-white);border:1px solid var(--fog);border-radius:100px;font-family:var(--font-display);font-size:.75rem;font-weight:600;color:var(--steel);margin:4px;transition:all var(--tr);cursor:pointer}
+.category-tag:hover{background:rgba(232,144,58,.08);border-color:var(--amber);color:var(--amber)}
+.newsletter-widget{background:var(--ink);border:none}
+.newsletter-widget h4{color:var(--amber-lt)}
+.newsletter-widget p{color:var(--mist);font-size:.85rem;margin-bottom:16px;max-width:none}
+.newsletter-widget input{width:100%;padding:11px 14px;border:1.5px solid rgba(255,255,255,.15);border-radius:var(--radius-sm);background:rgba(255,255,255,.07);color:white;font-family:var(--font-body);font-size:.9rem;outline:none;margin-bottom:10px}
+.newsletter-widget input::placeholder{color:var(--mist)}
+.newsletter-widget input:focus{border-color:var(--amber)}
+@media(max-width:1024px){.blog-grid{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.sidebar{grid-template-columns:1fr}.article-card{grid-template-columns:1fr}.article-thumb-sm{height:120px}}
+</style>
 </head>
 <body>
-
-<nav id="nav">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 28 28" fill="none"><rect x="2" y="12" width="8" height="14" rx="1.5" fill="#e8a020"/><rect x="12" y="6" width="8" height="20" rx="1.5" fill="#e8a020" opacity=".7"/><rect x="22" y="2" width="4" height="24" rx="1.5" fill="#e8a020" opacity=".4"/></svg>
-      SETT<span>LINKS</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="case_studies.html">Case Studies</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="partners.html">Partners</a></li>
-      <li class="nav-cta"><a href="contact.html">Get Started</a></li>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li>
     </ul>
+    <a href="contact.html" class="btn btn--primary btn--sm nav-cta">Get Started</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div id="nav-drawer" class="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="case-studies.html">Case Studies</a><a href="partners.html">Partners</a><a href="blog.html">Blog</a>
+  <a href="contact.html" class="btn btn--primary drawer-cta">Get Started →</a>
+</div>
 
-<div class="page-hero page-top" data-label="BLOG">
+<div class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Blog</span></div>
-    <div class="section-marker"><span class="label">Insights &amp; Resources</span></div>
-    <h1>Stay Ahead of<br><span class="text-amber">Mexico's Market</span></h1>
-    <p style="max-width:580px;margin-top:16px;font-size:1.05rem;">Industry analysis, nearshoring strategy, regulatory guidance, and automation trends — written for foreign manufacturers considering Mexico.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Blog</div>
+    <div class="label">Insights &amp; Resources</div>
+    <h1>Mexico Automation Insights</h1>
+    <p>Practical guides, market intelligence, and strategic thinking for industrial automation manufacturers eyeing Mexico.</p>
   </div>
 </div>
 
-<!-- FEATURED POST -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="label mb-24 reveal">Featured Article</div>
-    <div style="background:var(--plate);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:0;" class="reveal">
-      <div style="background:linear-gradient(135deg,var(--amber-dim) 0%,rgba(12,14,18,0.9) 100%);padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between;">
-        <div>
-          <span class="tag tag-amber">Nearshoring</span>
-          <h2 style="margin-top:24px;font-size:clamp(1.8rem,3vw,2.6rem);">Why Mexico is the Hub for Industrial Automation Nearshoring</h2>
-        </div>
-        <div>
-          <div class="blog-meta" style="margin-top:32px;">February 2026 · 8 min read</div>
-          <a href="#" class="btn btn-primary mt-16" style="width:fit-content;">Read Article ›</a>
-        </div>
-      </div>
-      <div style="padding:56px 48px;">
-        <p style="font-size:1rem;line-height:1.75;">Mexico's position as a nearshoring destination for industrial automation has strengthened dramatically since 2023. The convergence of USMCA trade advantages, a growing engineering talent pipeline, and proximity to the world's largest consumer market creates a unique window of opportunity for foreign automation manufacturers.</p>
-        <p class="mt-16">In this deep dive, we explore the USMCA supply chain benefits, the talent ecosystem in Mexico's industrial corridors, and how forward-thinking automation companies are capturing market share today — before the competition catches up.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;">
-          <span class="tag">USMCA</span>
-          <span class="tag">Nearshoring</span>
-          <span class="tag">Supply Chain</span>
-          <span class="tag">Talent</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BLOG GRID -->
 <section class="section">
   <div class="container">
-    <div class="section-marker reveal"><span class="label">Latest Articles</span></div>
-    <h2 class="reveal mb-40">From Our Research Team</h2>
-    <div class="grid-3" style="gap:24px;">
+    <div class="blog-grid">
 
-      <div class="blog-card reveal">
-        <div class="blog-card-thumb">📋</div>
-        <div class="blog-card-body">
-          <div class="blog-meta">January 2026 · Compliance</div>
-          <h3>Navigating IMMEX for Automation Manufacturers</h3>
-          <p>A practical step-by-step guide to IMMEX certification — from initial application through ongoing compliance requirements for industrial automation and component imports.</p>
-          <a href="#" class="btn btn-ghost mt-16" style="padding:10px 20px;width:fit-content;">Read More ›</a>
+      <!-- MAIN POSTS -->
+      <div class="main-posts">
+
+        <div class="featured-post reveal">
+          <div class="featured-thumb">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <div class="post-tag">Nearshoring</div>
+          </div>
+          <div class="featured-body">
+            <div class="post-meta">February 2026 &nbsp;·&nbsp; 8 min read &nbsp;·&nbsp; <span class="chip chip--amber">Featured</span></div>
+            <h2><a href="#">Why Mexico Is Now the World's #1 Nearshoring Destination for Industrial Automation</a></h2>
+            <p>The post-pandemic realignment of global supply chains has accelerated what was already a decade-long trend: foreign manufacturers — particularly those serving the North American market — are moving production closer to home. Mexico sits at the intersection of every factor driving this shift: USMCA-guaranteed preferential trade access, a deep engineering talent pool, competitive labor costs, and a geographic position that makes next-day logistics to US plants routine. This article explores what this means specifically for industrial automation manufacturers and why the window for advantageous market entry is right now.</p>
+            <a href="#" class="post-link">Read full article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
         </div>
+
+        <div class="article-card reveal">
+          <div class="article-thumb-sm"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg></div>
+          <div class="article-body">
+            <div class="post-meta">January 2026 &nbsp;·&nbsp; 6 min read</div>
+            <div style="margin-bottom:8px"><span class="chip chip--teal">IMMEX Guide</span></div>
+            <h3><a href="#">Navigating IMMEX Certification: A Step-by-Step Guide for Foreign Automation Manufacturers</a></h3>
+            <p>IMMEX (Maquila Export Manufacturing) is Mexico's flagship program for foreign manufacturers — allowing duty-free import of materials and equipment used in export production. This guide walks through every stage of the application process, common mistakes, and how to structure your operations to maximize the program's benefits.</p>
+            <a href="#" class="post-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="article-card reveal">
+          <div class="article-thumb-sm"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+          <div class="article-body">
+            <div class="post-meta">December 2025 &nbsp;·&nbsp; 5 min read</div>
+            <div style="margin-bottom:8px"><span class="chip chip--amber">Case Study</span></div>
+            <h3><a href="#">Cobots in Mexican Automotive: How Collaborative Robots Are Reshaping Assembly Lines in Monterrey</a></h3>
+            <p>Three automotive Tier-1 suppliers in the Monterrey industrial corridor have recently deployed collaborative robot systems on their main assembly lines. This case study looks at the drivers, the integration challenges, and the measurable productivity gains achieved in the first six months — with lessons applicable to any cobot manufacturer entering the market.</p>
+            <a href="#" class="post-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="article-card reveal">
+          <div class="article-thumb-sm"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="article-body">
+            <div class="post-meta">November 2025 &nbsp;·&nbsp; 7 min read</div>
+            <div style="margin-bottom:8px"><span class="chip chip--teal">Talent</span></div>
+            <h3><a href="#">Mexico's Engineering Talent Pool: What Automation Manufacturers Need to Know Before Hiring</a></h3>
+            <p>Mexico graduates over 130,000 engineers annually — but the talent landscape is far from uniform. This article breaks down which cities have the strongest automation and mechatronics talent concentrations, what compensation benchmarks look like for PLC and SCADA engineers in 2026, and how to build a recruitment pipeline before you need it.</p>
+            <a href="#" class="post-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="article-card reveal">
+          <div class="article-thumb-sm"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div class="article-body">
+            <div class="post-meta">October 2025 &nbsp;·&nbsp; 4 min read</div>
+            <div style="margin-bottom:8px"><span class="chip chip--amber">Investment</span></div>
+            <h3><a href="#">Structuring Equity Deals for Mexico Market Entry: What Foreign Manufacturers Should Negotiate</a></h3>
+            <p>When a foreign manufacturer enters Mexico through an equity partnership with a local holding company, the deal structure matters enormously. This article covers the key terms to negotiate — governance rights, exit provisions, IP protection, and milestone-based investment tranches — based on common structures used in industrial automation deals.</p>
+            <a href="#" class="post-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="article-card reveal">
+          <div class="article-thumb-sm"><svg viewBox="0 0 24 24"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div>
+          <div class="article-body">
+            <div class="post-meta">September 2025 &nbsp;·&nbsp; 6 min read</div>
+            <div style="margin-bottom:8px"><span class="chip chip--teal">Industry 4.0</span></div>
+            <h3><a href="#">IIoT Adoption in Mexican Manufacturing: Market Size, Key Sectors, and Entry Points for Foreign Suppliers</a></h3>
+            <p>Industrial Internet of Things adoption in Mexico has accelerated dramatically over the past three years, driven by automotive OEM mandates and a new generation of plant managers trained in digital manufacturing. This article maps the current IIoT market size by sector, identifies the highest-volume buyer segments, and outlines realistic entry strategies for foreign sensor and platform manufacturers.</p>
+            <a href="#" class="post-link">Read article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
       </div>
 
-      <div class="blog-card reveal reveal-delay-1">
-        <div class="blog-card-thumb">🤖</div>
-        <div class="blog-card-body">
-          <div class="blog-meta">December 2025 · Case Study</div>
-          <h3>Cobots in Mexican Automotive: Lessons from the Field</h3>
-          <p>Real deployment insights from collaborative robot installations in Monterrey's automotive Tier 1 facilities — technical, cultural, and logistical lessons learned.</p>
-          <a href="#" class="btn btn-ghost mt-16" style="padding:10px 20px;width:fit-content;">Read More ›</a>
-        </div>
-      </div>
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
 
-      <div class="blog-card reveal reveal-delay-2">
-        <div class="blog-card-thumb">📊</div>
-        <div class="blog-card-body">
-          <div class="blog-meta">November 2025 · Market Intelligence</div>
-          <h3>Mexico's Industry 4.0 Adoption Curve: Where Is It Now?</h3>
-          <p>An analysis of how quickly Mexican manufacturers are adopting IoT, digital twins, and smart factory technologies — and what it means for foreign technology providers.</p>
-          <a href="#" class="btn btn-ghost mt-16" style="padding:10px 20px;width:fit-content;">Read More ›</a>
+        <div class="sidebar-widget newsletter-widget reveal">
+          <h4>📬 Weekly Insights</h4>
+          <p>Mexico automation market intelligence delivered every Tuesday. No fluff — just data and strategy.</p>
+          <form id="newsletter-form">
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Subscribe Free</button>
+          </form>
         </div>
-      </div>
 
-      <div class="blog-card reveal">
-        <div class="blog-card-thumb">⚖️</div>
-        <div class="blog-card-body">
-          <div class="blog-meta">October 2025 · Legal</div>
-          <h3>Understanding Mexico's Foreign Direct Investment Rules for Manufacturers</h3>
-          <p>What foreign companies need to know about FDI regulations, ownership restrictions, and legal entity options when establishing manufacturing operations in Mexico.</p>
-          <a href="#" class="btn btn-ghost mt-16" style="padding:10px 20px;width:fit-content;">Read More ›</a>
+        <div class="sidebar-widget reveal">
+          <h4>📂 Categories</h4>
+          <div>
+            <span class="category-tag">Nearshoring</span>
+            <span class="category-tag">IMMEX</span>
+            <span class="category-tag">Venture Capital</span>
+            <span class="category-tag">Robotics</span>
+            <span class="category-tag">IoT / IIoT</span>
+            <span class="category-tag">Talent</span>
+            <span class="category-tag">Legal</span>
+            <span class="category-tag">Industry 4.0</span>
+            <span class="category-tag">Automotive</span>
+            <span class="category-tag">Aerospace</span>
+            <span class="category-tag">Supply Chain</span>
+            <span class="category-tag">USMCA</span>
+          </div>
         </div>
-      </div>
 
-      <div class="blog-card reveal reveal-delay-1">
-        <div class="blog-card-thumb">🏭</div>
-        <div class="blog-card-body">
-          <div class="blog-meta">September 2025 · Site Selection</div>
-          <h3>Monterrey vs Querétaro: Choosing Your Mexican Manufacturing Hub</h3>
-          <p>A detailed comparison of Mexico's two leading industrial corridors across infrastructure, talent availability, incentive programs, and sector specialization.</p>
-          <a href="#" class="btn btn-ghost mt-16" style="padding:10px 20px;width:fit-content;">Read More ›</a>
+        <div class="sidebar-widget reveal">
+          <h4>📖 Popular Articles</h4>
+          <ul class="sidebar-links">
+            <li><a href="#">IMMEX Step-by-Step Guide</a></li>
+            <li><a href="#">Best Industrial Parks in Monterrey</a></li>
+            <li><a href="#">Cobot Market Size Mexico 2026</a></li>
+            <li><a href="#">USMCA Rules of Origin for Automation</a></li>
+            <li><a href="#">PLC Engineer Salaries in Mexico</a></li>
+            <li><a href="#">Setting Up a SAPI in Mexico</a></li>
+          </ul>
         </div>
-      </div>
 
-      <div class="blog-card reveal reveal-delay-2">
-        <div class="blog-card-thumb">💰</div>
-        <div class="blog-card-body">
-          <div class="blog-meta">August 2025 · Finance</div>
-          <h3>Structuring Equity Partnerships for Mexico Market Entry</h3>
-          <p>How to structure joint ventures and equity arrangements with Mexican partners — covering tax implications, shareholder agreements, and milestone-based capital deployment.</p>
-          <a href="#" class="btn btn-ghost mt-16" style="padding:10px 20px;width:fit-content;">Read More ›</a>
+        <div class="sidebar-widget reveal" style="background:var(--ink);border-color:rgba(255,255,255,.08)">
+          <h4 style="color:var(--amber-lt)">🚀 Free Resource</h4>
+          <p style="color:var(--mist);font-size:.86rem;max-width:none;margin-bottom:16px">Download our <strong style="color:white">Mexico Market Entry Checklist</strong> — 47 steps from entity formation to first customer delivery.</p>
+          <a href="contact.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center">Get Free Checklist</a>
         </div>
-      </div>
 
+      </aside>
     </div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="section section-dark">
-  <div class="container" style="max-width:640px;text-align:center;">
-    <div class="section-marker reveal" style="justify-content:center;"><span class="label">Stay Informed</span></div>
-    <h2 class="reveal">Get Mexico Market Updates<br>in Your Inbox</h2>
-    <p class="mt-16 reveal reveal-delay-1">Monthly insights on nearshoring trends, regulatory changes, and industrial automation opportunities in Mexico — no spam.</p>
-    <form data-gas style="margin-top:36px;display:flex;flex-direction:column;gap:16px;" class="reveal reveal-delay-2">
-      <input type="hidden" name="form_type" value="newsletter">
-      <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <div class="form-group" style="flex:1;min-width:200px;margin-bottom:0;">
-          <input type="text" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group" style="flex:1;min-width:200px;margin-bottom:0;">
-          <input type="email" name="email" placeholder="Work Email" required>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Subscribe to Updates ›</button>
-      <p style="font-size:0.78rem;color:var(--muted);">No spam. Unsubscribe anytime. We respect your privacy.</p>
-    </form>
-  </div>
-</section>
-
-<footer>
+<footer id="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a class="footer-logo" href="index.html">SETT<span>LINKS</span></a><p class="footer-desc">Bridging global industrial automation innovators with Mexico's manufacturing ecosystem.</p><div class="social-links"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Twitter">𝕏</a><a href="#" aria-label="Email">✉</a></div></div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li><li><a href="legal.html">Legal &amp; Privacy</a></li></ul></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Representation</a></li><li><a href="services.html">Automation Integration</a></li></ul></div>
-      <div class="footer-col"><h5>Resources</h5><ul><li><a href="industries.html">Industries</a></li><li><a href="case_studies.html">Case Studies</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#faq">FAQs</a></li></ul></div>
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+        <p>Mexico's premier gateway for foreign industrial automation manufacturers.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Compliance</a></li><li><a href="services.html">Talent Recruitment</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="mailto:hello@settlinks.com">hello@settlinks.com</a></li><li><a href="tel:+14165550123">+1 (416) 555-0123</a></li><li><a href="legal.html">Privacy &amp; Legal</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Settlinks Holdings. All rights reserved.</span><span>Toronto, ON · Mexico Operations</span><a href="legal.html" style="color:var(--muted);">Privacy &amp; Legal</a></div>
+    <div class="footer-bottom">
+      <span>© 2026 Settlinks Holdings Inc. · Toronto, Canada &amp; Monterrey, Mexico</span>
+      <div><a href="legal.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="legal.html">Terms</a></div>
+    </div>
   </div>
 </footer>
-<div id="toast"></div>
-<script src="main.js"></script>
+<script src="assets/main.js"></script>
+<script>setupNewsletter('newsletter-form');</script>
 </body>
 </html>
