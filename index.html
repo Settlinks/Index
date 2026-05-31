@@ -1,352 +1,278 @@
+cat > /mnt/user-data/outputs/settlinks/index.html << 'HTMLEOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Settlinks – Your strategic partner for industrial automation expansion in Mexico. We bridge foreign manufacturers with Mexico's booming market through equity partnerships, venture capital, and legal representation.">
-  <title>Settlinks — Industrial Automation Expansion in Mexico</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23e8a020'/><text x='16' y='23' text-anchor='middle' font-size='18' font-weight='900' font-family='sans-serif' fill='%230c0e12'>S</text></svg>">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Settlinks — Your strategic partner for industrial automation expansion into Mexico. Equity partnerships, venture capital, and legal representation.">
+<title>Settlinks — Gateway to Industrial Automation in Mexico</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.hero{min-height:100vh;background:var(--ink);display:flex;align-items:center;padding-top:var(--nav-h);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 65% 50%,rgba(232,144,58,.13) 0%,transparent 65%),radial-gradient(ellipse 45% 55% at 15% 70%,rgba(29,138,126,.10) 0%,transparent 55%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 0}
+.hero-content{position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(232,144,58,.12);border:1px solid rgba(232,144,58,.25);border-radius:100px;padding:6px 16px;margin-bottom:28px;font-family:var(--font-display);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
+.dot-pulse{width:6px;height:6px;border-radius:50%;background:var(--amber);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-content h1{color:var(--white);margin-bottom:24px}
+.hero-content h1 em{font-style:normal;color:var(--amber)}
+.hero-content>p{color:var(--mist);font-size:1.1rem;max-width:52ch;margin-bottom:40px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-trust{display:flex;align-items:center;gap:16px;margin-top:48px;padding-top:36px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.trust-label{font-size:.8rem;color:var(--mist)}
+.trust-flags{display:flex;gap:12px;flex-wrap:wrap}
+.flag{font-family:var(--font-display);font-size:.78rem;font-weight:600;color:rgba(255,255,255,.7)}
+.hero-visual{position:relative;z-index:1}
+.hero-card-stack{position:relative;height:460px}
+.hcard{position:absolute;border-radius:var(--radius-md);padding:24px 28px;background:var(--ink-2);border:1px solid rgba(255,255,255,.1)}
+.hcard-1{right:0;top:0;width:300px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.hcard-2{left:0;top:110px;width:280px;background:linear-gradient(135deg,rgba(232,144,58,.15),rgba(232,144,58,.05));border-color:rgba(232,144,58,.3);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.hcard-3{right:20px;bottom:0;width:260px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.hcard-dots{display:flex;gap:6px;margin-bottom:12px}
+.hcard-dots span{width:8px;height:8px;border-radius:50%}
+.dot-r{background:#ff5f57}.dot-y{background:#febc2e}.dot-g{background:#28c840}
+.hcard-label{font-size:.72rem;color:var(--mist);font-family:var(--font-display);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.hcard-value{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--white)}
+.hcard-sub{font-size:.8rem;color:var(--amber);margin-top:4px}
+.hcard-metric{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.08)}
+.hcard-metric span{font-size:.8rem;color:var(--mist)}
+.hcard-metric strong{color:var(--amber);font-family:var(--font-display)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-visual{background:linear-gradient(135deg,var(--ink-2),var(--steel));border-radius:var(--radius-lg);padding:40px}
+.why-bullets{display:flex;flex-direction:column;gap:28px}
+.why-bullet{display:flex;gap:18px}
+.why-bullet-icon{flex-shrink:0;width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,rgba(232,144,58,.15),rgba(232,144,58,.05));border:1px solid rgba(232,144,58,.25);display:flex;align-items:center;justify-content:center}
+.why-bullet-icon svg{width:22px;height:22px;fill:none;stroke:var(--amber);stroke-width:1.8}
+.why-bullet h4{font-size:.95rem;margin-bottom:4px}
+.why-bullet p{font-size:.87rem;max-width:none}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:50px}.hero-card-stack{display:none}.why-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.hero-actions{flex-direction:column}.hero-actions .btn{justify-content:center}}
+</style>
 </head>
 <body>
-
-<!-- ══ NAV ══════════════════════════════════════════════════ -->
-<nav id="nav">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="12" width="8" height="14" rx="1.5" fill="#e8a020"/>
-        <rect x="12" y="6" width="8" height="20" rx="1.5" fill="#e8a020" opacity=".7"/>
-        <rect x="22" y="2" width="4" height="24" rx="1.5" fill="#e8a020" opacity=".4"/>
-      </svg>
-      SETT<span>LINKS</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="case_studies.html">Case Studies</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="partners.html">Partners</a></li>
-      <li class="nav-cta"><a href="contact.html">Get Started</a></li>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li>
     </ul>
+    <a href="contact.html" class="btn btn--primary btn--sm nav-cta">Get Started</a>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div id="nav-drawer" class="nav-drawer">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="case-studies.html">Case Studies</a><a href="partners.html">Partners</a><a href="blog.html">Blog</a>
+  <a href="contact.html" class="btn btn--primary drawer-cta">Get Started →</a>
+</div>
 
-<!-- ══ HERO ═════════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
   <div class="container">
-    <div class="hero-eyebrow">
-      <span class="label">Mexico Market Entry Specialists</span>
-    </div>
-    <h1 class="hero-title">
-      Expand Your<br>
-      <span class="text-amber">Industrial Automation</span><br>
-      Business in Mexico
-    </h1>
-    <p class="hero-sub">
-      Settlinks bridges foreign manufacturers with Mexico's booming manufacturing ecosystem — through equity partnerships, venture capital, distribution channels, and expert legal representation.
-    </p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn btn-primary">Start Expanding ›</a>
-      <a href="services.html" class="btn btn-ghost">Our Services</a>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow"><span class="dot-pulse"></span>Industrial Automation · Mexico Market Entry</div>
+        <h1>Expand Your Business Into <em>Mexico's</em> Automation Economy</h1>
+        <p>Settlinks partners with foreign manufacturers as shareholders, venture capitalists, and legal representatives — turning Mexico market entry into a smooth, profitable operation.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn--primary">Start Your Expansion <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="services.html" class="btn btn--outline">Explore Services</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-label">Serving clients from:</span>
+          <div class="trust-flags">
+            <span class="flag">🇩🇪 Germany</span><span class="flag">🇯🇵 Japan</span><span class="flag">🇺🇸 USA</span><span class="flag">🇨🇦 Canada</span><span class="flag">🇰🇷 Korea</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="hcard hcard-1">
+            <div class="hcard-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+            <div class="hcard-label">Portfolio Growth</div>
+            <div class="hcard-value">+40%</div>
+            <div class="hcard-sub">avg. cost reduction for partners</div>
+            <div class="hcard-metric"><span>Time to market</span><strong>3–6 months</strong></div>
+          </div>
+          <div class="hcard hcard-2">
+            <div class="hcard-label">Active Investment</div>
+            <div class="hcard-value">$12M+</div>
+            <div class="hcard-sub">deployed in MX ventures</div>
+            <div class="hcard-metric"><span>Partners</span><strong>30+ firms</strong></div>
+          </div>
+          <div class="hcard hcard-3">
+            <div class="hcard-label">Market Coverage</div>
+            <div class="hcard-value">12 States</div>
+            <div class="hcard-sub">across Mexico's industrial belt</div>
+            <div class="hcard-metric"><span>IMMEX certified</span><strong>100%</strong></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="hero-scroll">Scroll</div>
 </section>
 
-<!-- ══ TICKER ════════════════════════════════════════════════ -->
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker">
-    <span>USMCA Advantage</span><span class="ticker-dot">·</span>
-    <span>IMMEX Certified</span><span class="ticker-dot">·</span>
-    <span>Venture Capital</span><span class="ticker-dot">·</span>
-    <span>Industrial Automation</span><span class="ticker-dot">·</span>
-    <span>Nearshoring</span><span class="ticker-dot">·</span>
-    <span>Equity Partnerships</span><span class="ticker-dot">·</span>
-    <span>Robotics &amp; Cobots</span><span class="ticker-dot">·</span>
-    <span>IoT Integration</span><span class="ticker-dot">·</span>
-    <span>Industry 4.0</span><span class="ticker-dot">·</span>
-    <!-- duplicate for seamless loop -->
-    <span>USMCA Advantage</span><span class="ticker-dot">·</span>
-    <span>IMMEX Certified</span><span class="ticker-dot">·</span>
-    <span>Venture Capital</span><span class="ticker-dot">·</span>
-    <span>Industrial Automation</span><span class="ticker-dot">·</span>
-    <span>Nearshoring</span><span class="ticker-dot">·</span>
-    <span>Equity Partnerships</span><span class="ticker-dot">·</span>
-    <span>Robotics &amp; Cobots</span><span class="ticker-dot">·</span>
-    <span>IoT Integration</span><span class="ticker-dot">·</span>
-    <span>Industry 4.0</span><span class="ticker-dot">·</span>
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="stat-num" data-target="30" data-suffix="+">30+</div><div class="stat-label">Partner Companies</div></div>
+      <div class="stat reveal reveal-delay-1"><div class="stat-num" data-target="40" data-suffix="%">40%</div><div class="stat-label">Avg. Cost Savings</div></div>
+      <div class="stat reveal reveal-delay-2"><div class="stat-num" data-target="12" data-suffix="M+">12M+</div><div class="stat-label">Capital Deployed (USD)</div></div>
+      <div class="stat reveal reveal-delay-3"><div class="stat-num" data-target="5" data-suffix=" mos">5 mos</div><div class="stat-label">Avg. Time to Operate</div></div>
+    </div>
   </div>
 </div>
 
-<!-- ══ STATS ═════════════════════════════════════════════════ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="grid-4">
-      <div class="reveal">
-        <div class="stat-num count-up" data-target="40" data-suffix="%">0%</div>
-        <div class="stat-label">Average Cost Savings</div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="stat-num count-up" data-target="3" data-suffix=" Mo" data-prefix="~">0 Mo</div>
-        <div class="stat-label">Avg. Market Entry Time</div>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div class="stat-num count-up" data-target="200" data-suffix="%">0%</div>
-        <div class="stat-label">Production Increase on Record</div>
-      </div>
-      <div class="reveal reveal-delay-3">
-        <div class="stat-num count-up" data-target="4" data-suffix="+">0+</div>
-        <div class="stat-label">Strategic Partner Organizations</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ SERVICES PREVIEW ══════════════════════════════════════ -->
+<!-- SERVICES OVERVIEW -->
 <section class="section">
   <div class="container">
-    <div class="section-marker reveal">
-      <span class="label">What We Do</span>
+    <div class="reveal" style="max-width:600px;margin-bottom:56px">
+      <div class="label">What We Do</div>
+      <h2>Three Core Ways We Partner With You</h2>
+      <p>We don't just consult — we have skin in the game. Settlinks invests alongside you and stays engaged through every stage of your Mexico operation.</p>
     </div>
-    <h2 class="reveal mb-40">End-to-end expansion<br>for automation firms</h2>
-
     <div class="grid-3">
       <div class="card reveal">
-        <div class="card-icon">⚙️</div>
-        <h3>Market Entry Advisory</h3>
-        <p class="mt-16">Strategic planning, competitor benchmarking, and nearshoring strategies leveraging USMCA trade benefits for your sector.</p>
-        <a href="services.html" class="btn btn-ghost mt-24" style="width:fit-content;padding:10px 20px">Learn More ›</a>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Equity Partnership</h3>
+        <p>We take a stake in your Mexican entity, aligning our success with yours. As shareholders, we bring capital, networks, and strategic weight to every decision.</p>
+        <a href="services.html" class="post-link">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <div class="card reveal reveal-delay-1">
-        <div class="card-icon">💼</div>
-        <h3>Venture Capital &amp; Equity</h3>
-        <p class="mt-16">We invest as shareholders or venture capitalists, taking equity stakes in joint ventures aligned to production scaling milestones.</p>
-        <a href="services.html" class="btn btn-ghost mt-24" style="width:fit-content;padding:10px 20px">Learn More ›</a>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>Venture Capital</h3>
+        <p>Milestone-based funding designed for automation manufacturers. We structure investments around production scaling, IMMEX compliance, and distribution goals.</p>
+        <a href="services.html" class="post-link">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <div class="card reveal reveal-delay-2">
-        <div class="card-icon">⚖️</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg></div>
         <h3>Legal Representation</h3>
-        <p class="mt-16">IMMEX certification, permits, labor compliance, and acting as your legal representative to navigate Mexico's regulatory landscape.</p>
-        <a href="services.html" class="btn btn-ghost mt-24" style="width:fit-content;padding:10px 20px">Learn More ›</a>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">🏭</div>
-        <h3>Site Selection &amp; Setup</h3>
-        <p class="mt-16">Optimal industrial park locations in Monterrey, Querétaro, and beyond — with full facility design and automation line integration.</p>
-        <a href="services.html" class="btn btn-ghost mt-24" style="width:fit-content;padding:10px 20px">Learn More ›</a>
-      </div>
-      <div class="card reveal reveal-delay-1">
-        <div class="card-icon">🔗</div>
-        <h3>Distribution Channels</h3>
-        <p class="mt-16">Build new sales networks through local partnerships targeting automotive, aerospace, and electronics sectors.</p>
-        <a href="services.html" class="btn btn-ghost mt-24" style="width:fit-content;padding:10px 20px">Learn More ›</a>
-      </div>
-      <div class="card reveal reveal-delay-2">
-        <div class="card-icon">🤖</div>
-        <h3>Automation Integration</h3>
-        <p class="mt-16">Industry 4.0 implementation: cobots, predictive maintenance AI, IoT systems, PLCs, and SCADA deployment support.</p>
-        <a href="services.html" class="btn btn-ghost mt-24" style="width:fit-content;padding:10px 20px">Learn More ›</a>
+        <p>Acting as your official legal representative in Mexico — IMMEX certification, regulatory compliance, labor law, and distribution channel agreements handled in full.</p>
+        <a href="services.html" class="post-link">Learn more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
-
-    <div class="text-center mt-40 reveal">
-      <a href="services.html" class="btn btn-outline">View All Services ›</a>
+    <div style="text-align:center;margin-top:48px">
+      <a href="services.html" class="btn btn--dark">View All 8 Services</a>
     </div>
   </div>
 </section>
 
-<!-- ══ WHY MEXICO ════════════════════════════════════════════ -->
-<section class="section section-dark">
+<!-- WHY MEXICO -->
+<section class="section section--tinted">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <div class="why-grid">
       <div class="reveal">
-        <div class="section-marker"><span class="label">Why Mexico</span></div>
-        <h2>The Premier Nearshoring Destination</h2>
-        <p class="mt-16">Mexico offers a powerful combination of geographic proximity, trade advantages, and a rapidly growing industrial talent pool that no other market can match.</p>
-        <ul style="list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:16px;">
-          <li style="display:flex;align-items:flex-start;gap:12px;">
-            <span style="color:var(--amber);font-size:1.1rem;margin-top:2px;">✓</span>
-            <div>
-              <strong>USMCA Trade Framework</strong>
-              <p style="font-size:0.9rem;margin-top:4px;">Duty-free access to US &amp; Canadian markets with simplified rules of origin for manufactured goods.</p>
-            </div>
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:12px;">
-            <span style="color:var(--amber);font-size:1.1rem;margin-top:2px;">✓</span>
-            <div>
-              <strong>IMMEX Manufacturing Program</strong>
-              <p style="font-size:0.9rem;margin-top:4px;">Import raw materials and equipment duty-free for the manufacture of exported products.</p>
-            </div>
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:12px;">
-            <span style="color:var(--amber);font-size:1.1rem;margin-top:2px;">✓</span>
-            <div>
-              <strong>Growing Talent Pool</strong>
-              <p style="font-size:0.9rem;margin-top:4px;">120K+ engineering graduates annually with strong technical expertise in automation and manufacturing.</p>
-            </div>
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:12px;">
-            <span style="color:var(--amber);font-size:1.1rem;margin-top:2px;">✓</span>
-            <div>
-              <strong>Cost Competitiveness</strong>
-              <p style="font-size:0.9rem;margin-top:4px;">Competitive labor costs with significantly lower logistics overhead versus Asian manufacturing alternatives.</p>
-            </div>
-          </li>
-        </ul>
-        <a href="industries.html" class="btn btn-primary mt-40">Explore Industries ›</a>
-      </div>
-      <div class="reveal reveal-delay-1" style="position:relative;">
-        <div style="background:var(--plate);border:1px solid var(--border);border-radius:16px;padding:40px;position:relative;overflow:hidden;">
-          <div style="position:absolute;top:-20px;right:-20px;font-family:'Bebas Neue',sans-serif;font-size:10rem;color:rgba(232,160,32,0.04);pointer-events:none;line-height:1;">MX</div>
-          <div class="label mb-24">Key Manufacturing Hubs</div>
-          <div style="display:flex;flex-direction:column;gap:16px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);">
-              <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Monterrey, NL</span>
-              <span class="tag tag-amber">Automotive · Aerospace</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);">
-              <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Querétaro, QRO</span>
-              <span class="tag tag-amber">Aerospace · Electronics</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border);">
-              <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Guadalajara, JAL</span>
-              <span class="tag tag-amber">Electronics · Tech</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;">
-              <span style="font-family:var(--font-ui);font-weight:600;color:var(--snow);">Tijuana, BC</span>
-              <span class="tag tag-amber">Med Devices · Mfg</span>
-            </div>
+        <div class="label">The Opportunity</div>
+        <h2>Why Mexico, Why Now</h2>
+        <p>Mexico has become North America's premier nearshoring destination for industrial automation — driven by USMCA trade advantages, a growing engineering talent pool, and proximity to the US market.</p>
+        <div class="why-bullets" style="margin-top:36px">
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h4>USMCA Preferential Access</h4><p>Zero-tariff manufacturing exports to both the US and Canada — unmatched by any other nearshoring destination worldwide.</p></div>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+            <div><h4>Industry 4.0 Growth Hub</h4><p>Mexico's automotive and aerospace sectors are rapidly adopting robotics, cobots, IoT, and AI-driven manufacturing systems.</p></div>
+          </div>
+          <div class="why-bullet">
+            <div class="why-bullet-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div><h4>Engineering Talent at Scale</h4><p>130,000+ STEM graduates annually in Monterrey, Querétaro, and Guadalajara — Mexico's technology triangle.</p></div>
           </div>
         </div>
       </div>
+      <div class="why-visual reveal reveal-delay-1">
+        <div class="why-stat-row"><div class="why-stat-row-label">🇲🇽 Foreign Direct Investment (2024)</div><div class="why-stat-row-val">$36B+</div></div>
+        <div class="why-stat-row"><div class="why-stat-row-label">⚙️ Industrial Parks Available</div><div class="why-stat-row-val">400+</div></div>
+        <div class="why-stat-row"><div class="why-stat-row-label">🚗 Automotive Production Rank</div><div class="why-stat-row-val">#7 Global</div></div>
+        <div class="why-stat-row"><div class="why-stat-row-label">📦 US-MX Trade Volume / Year</div><div class="why-stat-row-val">$800B+</div></div>
+        <div class="why-stat-row"><div class="why-stat-row-label">🎓 Engineers Graduated / Year</div><div class="why-stat-row-val">130,000+</div></div>
+        <div class="why-stat-row"><div class="why-stat-row-label">💰 Labor Cost vs USA</div><div class="why-stat-row-val">~70% Lower</div></div>
+      </div>
     </div>
   </div>
-
-  <style>
-    @media (max-width: 768px) {
-      .why-grid { grid-template-columns: 1fr !important; }
-    }
-  </style>
 </section>
 
-<!-- ══ CASE STUDY TEASER ═════════════════════════════════════ -->
+<!-- PROCESS -->
 <section class="section">
   <div class="container">
-    <div class="section-marker reveal"><span class="label">Success Stories</span></div>
-    <h2 class="reveal mb-40">Partners who made it work</h2>
+    <div style="text-align:center;max-width:560px;margin:0 auto 64px" class="reveal">
+      <div class="label">How It Works</div>
+      <h2>From First Call to Full Operation</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num">1</div><h3>Discovery Call</h3><p>We learn your product, goals, and timeline. You get a frank view of Mexico's market fit for your offering.</p></div>
+      <div class="step reveal reveal-delay-1"><div class="step-num">2</div><h3>Strategy &amp; Structure</h3><p>We define the partnership model — equity, VC, or legal rep — and map out the full market entry plan.</p></div>
+      <div class="step reveal reveal-delay-2"><div class="step-num">3</div><h3>Market Entry</h3><p>IMMEX filing, site selection, regulatory setup, supplier mapping, and talent recruitment — handled end-to-end.</p></div>
+      <div class="step reveal reveal-delay-3"><div class="step-num">4</div><h3>Scale &amp; Grow</h3><p>Distribution channels activated, operations running, continuous optimization for cost, quality, and throughput.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section--steel">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px" class="reveal">
+      <div class="label" style="color:var(--amber-lt);justify-content:center">Client Voices</div>
+      <h2 style="color:white">What Our Partners Say</h2>
+    </div>
     <div class="grid-3">
-      <div class="case-card reveal">
-        <div class="tag mb-16">Robotics · Europe</div>
-        <h3 style="font-size:1.4rem;">European Robotics Firm Expands to Monterrey</h3>
-        <p>Partnered as shareholders, established IMMEX-compliant facility, and built direct distribution channels into automotive OEMs.</p>
-        <div class="case-result">
-          <div class="case-result-item">
-            <div class="stat-num" style="font-size:2rem;">40%</div>
-            <div class="stat-label">Cost Savings</div>
-          </div>
-        </div>
+      <div class="testimonial reveal">
+        <p>"Settlinks made our Monterrey facility a reality in under five months. Their IMMEX expertise saved us from costly delays, and their equity involvement meant they were as motivated as we were."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">KM</div><div><div class="testimonial-name">Klaus Müller</div><div class="testimonial-title">CEO, RoboTechnik GmbH — Germany</div></div></div>
       </div>
-      <div class="case-card reveal reveal-delay-1">
-        <div class="tag mb-16">IoT · Asia</div>
-        <h3 style="font-size:1.4rem;">Asian IoT Provider Enters Automotive Market</h3>
-        <p>Provided venture capital and legal representation, integrating predictive maintenance AI with local Tier 1 suppliers.</p>
-        <div class="case-result">
-          <div class="case-result-item">
-            <div class="stat-num" style="font-size:2rem;">6</div>
-            <div class="stat-label">Mos. to Launch</div>
-          </div>
-        </div>
+      <div class="testimonial reveal reveal-delay-1">
+        <p>"As an Asian IoT provider we had zero contacts in Mexico. Settlinks connected us with three automotive OEMs in our first quarter. The venture capital structure was straightforward and fair."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">TN</div><div><div class="testimonial-name">Takashi Nakamura</div><div class="testimonial-title">Director, SensePro Asia — Japan</div></div></div>
       </div>
-      <div class="case-card reveal reveal-delay-2">
-        <div class="tag mb-16">Cobots · USA</div>
-        <h3 style="font-size:1.4rem;">US Cobot Manufacturer Scales Operations</h3>
-        <p>Site selection, IMMEX setup, and targeted talent recruitment accelerated production ramp across two facilities.</p>
-        <div class="case-result">
-          <div class="case-result-item">
-            <div class="stat-num" style="font-size:2rem;">200%</div>
-            <div class="stat-label">Production Growth</div>
-          </div>
-        </div>
+      <div class="testimonial reveal reveal-delay-2">
+        <p>"We doubled production capacity within a year of working with Settlinks. Their talent recruitment program found us certified cobot technicians we couldn't source on our own in Querétaro."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">SR</div><div><div class="testimonial-name">Sandra Rivera</div><div class="testimonial-title">VP Operations, NexCobot Inc. — USA</div></div></div>
       </div>
-    </div>
-    <div class="text-center mt-40 reveal">
-      <a href="case_studies.html" class="btn btn-outline">All Case Studies ›</a>
     </div>
   </div>
 </section>
 
-<!-- ══ CTA BAND ══════════════════════════════════════════════ -->
-<section style="background:var(--amber);padding:72px 0;">
-  <div class="container text-center">
-    <h2 style="color:var(--ink);font-size:clamp(2rem,4vw,3.2rem);" class="reveal">Ready to enter Mexico's market?</h2>
-    <p style="color:rgba(12,14,18,0.7);max-width:520px;margin:16px auto 36px;font-weight:400;" class="reveal reveal-delay-1">
-      Let's build your expansion strategy together. Book a free consultation with our team today.
-    </p>
-    <div class="reveal reveal-delay-2" style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
-      <a href="contact.html" class="btn" style="background:var(--ink);color:var(--amber);">Schedule a Consultation ›</a>
-      <a href="services.html" class="btn" style="background:transparent;color:var(--ink);border:2px solid var(--ink);">Our Services</a>
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <div class="label" style="color:rgba(255,255,255,.8)">Ready to Begin?</div>
+        <h2>Book a Free Expansion Strategy Session</h2>
+        <p>30 minutes. No obligation. Walk away with a clear picture of what market entry looks like for your product in Mexico.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn--dark">Book Free Consultation</a>
+        <a href="case-studies.html" class="btn btn--outline">See Case Studies</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ════════════════════════════════════════════════ -->
-<footer>
+<!-- FOOTER -->
+<footer id="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="footer-logo" href="index.html">SETT<span>LINKS</span></a>
-        <p class="footer-desc">Bridging global industrial automation innovators with Mexico's thriving manufacturing ecosystem through strategic partnerships, capital, and expert guidance.</p>
-        <div class="social-links">
-          <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
-          <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
-          <a href="#" aria-label="Email" title="Email">✉</a>
+        <a href="index.html" class="nav-logo" style="margin-bottom:4px"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>Sett<span>links</span></a>
+        <p>Mexico's premier gateway for foreign industrial automation manufacturers. We invest, represent, and grow with you.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
         </div>
       </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="legal.html">Legal &amp; Privacy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Services</h5>
-        <ul>
-          <li><a href="services.html">Market Entry</a></li>
-          <li><a href="services.html">Venture Capital</a></li>
-          <li><a href="services.html">Legal Representation</a></li>
-          <li><a href="services.html">Automation Integration</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Resources</h5>
-        <ul>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="case_studies.html">Case Studies</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="contact.html#faq">FAQs</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="partners.html">Partners</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Market Entry</a></li><li><a href="services.html">Venture Capital</a></li><li><a href="services.html">Legal Compliance</a></li><li><a href="services.html">Talent Recruitment</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Get in Touch</a></li><li><a href="mailto:hello@settlinks.com">hello@settlinks.com</a></li><li><a href="tel:+14165550123">+1 (416) 555-0123</a></li><li><a href="legal.html">Privacy &amp; Legal</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Settlinks Holdings. All rights reserved.</span>
-      <span>Toronto, ON · Mexico Operations</span>
-      <a href="legal.html" style="color:var(--muted);">Privacy &amp; Legal</a>
+      <span>© 2026 Settlinks Holdings Inc. · Toronto, Canada &amp; Monterrey, Mexico</span>
+      <div><a href="legal.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="legal.html">Terms</a></div>
     </div>
   </div>
 </footer>
-
-<div id="toast"></div>
-<script src="main.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
+HTMLEOF
+echo "index done"
