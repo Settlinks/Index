@@ -86,19 +86,13 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         CONTACT SECTION  –  id="contact" added so
-         the "Get Started" button scroll target works
-         ══════════════════════════════════════════ -->
+
     <section class="section" id="contact">
         <h2>Contact Us</h2>
 
         <div id="form-status" role="alert"></div>
 
-        <!--
-            NO action / method attributes — submission is handled by fetch() below.
-            Field names match code.gs exactly: name, email, company, service, message.
-        -->
+
         <form id="contact-form" novalidate>
             <input  type="text"  name="name"    placeholder="Your Name"     required>
             <input  type="email" name="email"   placeholder="Your Email"    required>
@@ -125,8 +119,8 @@
 
     <script>
     (function () {
-        // ← Paste your deployed Apps Script Web App URL here
-        var SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
+       
+        var SCRIPT_URL = 'https://tinyurl.com/2dfsmbsu';
 
         var form      = document.getElementById('contact-form');
         var statusBox = document.getElementById('form-status');
