@@ -65,13 +65,19 @@
         </div>
     </section>
 
-    <section class="section" id="contact">
-        <h2>Contact Us</h2>
-        <form action="YOUR_APPS_SCRIPT_URL" method="POST">
+    <section class="section">
+        <form action="https://tinyurl.com/2dfsmbsu" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="text" name="company" placeholder="Company Name" required>
-            <textarea name="message" placeholder="Tell us about your expansion plans" rows="5" required></textarea>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="Market Entry">Market Entry Advisory</option>
+                <option value="Legal">Legal Compliance</option>
+                <option value="Investment">Venture Capital</option>
+                <option value="Other">Other</option>
+            </select>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </section>
