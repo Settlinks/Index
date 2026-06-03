@@ -13,10 +13,8 @@
         .section { padding: 40px 20px; max-width: 1200px; margin: auto; }
         .services { display: flex; flex-wrap: wrap; justify-content: space-around; }
         .service { flex: 1; min-width: 250px; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; }
-
-        /* ── Form ── */
         form { max-width: 600px; margin: auto; }
-        input, textarea, select {
+        input, select, textarea {
             width: 100%; padding: 10px; margin: 10px 0;
             border: 1px solid #ccc; border-radius: 4px;
             font-family: inherit; font-size: 1rem;
@@ -24,8 +22,6 @@
         }
         button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
         button:disabled { opacity: .6; cursor: not-allowed; }
-
-        /* ── Status banner ── */
         #form-status {
             display: none;
             max-width: 600px;
@@ -36,7 +32,6 @@
         }
         #form-status.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         #form-status.error   { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-
         footer { background: #333; color: white; text-align: center; padding: 10px; }
         @media (max-width: 768px) { .hero h1 { font-size: 2em; } .services { flex-direction: column; } }
     </style>
@@ -45,15 +40,15 @@
     <header>
         <h2>Settlinks</h2>
         <nav>
-            <a href="#"              style="color:white;margin:0 15px;text-decoration:none;">Home</a>
-            <a href="about.html"     style="color:white;margin:0 15px;text-decoration:none;">About</a>
-            <a href="industries.html"style="color:white;margin:0 15px;text-decoration:none;">Industries</a>
-            <a href="services.html"  style="color:white;margin:0 15px;text-decoration:none;">Services</a>
-            <a href="partners.html"  style="color:white;margin:0 15px;text-decoration:none;">Partners</a>
-            <a href="case_studies.html"style="color:white;margin:0 15px;text-decoration:none;">Case Studies</a>
-            <a href="blog.html"      style="color:white;margin:0 15px;text-decoration:none;">Blog</a>
-            <a href="legal.html"     style="color:white;margin:0 15px;text-decoration:none;">Legal</a>
-            <a href="contact.html"   style="color:white;margin:0 15px;text-decoration:none;">Contact</a>
+            <a href="#"               style="color:white;margin:0 15px;text-decoration:none;">Home</a>
+            <a href="about.html"      style="color:white;margin:0 15px;text-decoration:none;">About</a>
+            <a href="industries.html" style="color:white;margin:0 15px;text-decoration:none;">Industries</a>
+            <a href="services.html"   style="color:white;margin:0 15px;text-decoration:none;">Services</a>
+            <a href="partners.html"   style="color:white;margin:0 15px;text-decoration:none;">Partners</a>
+            <a href="case_studies.html" style="color:white;margin:0 15px;text-decoration:none;">Case Studies</a>
+            <a href="blog.html"       style="color:white;margin:0 15px;text-decoration:none;">Blog</a>
+            <a href="legal.html"      style="color:white;margin:0 15px;text-decoration:none;">Legal</a>
+            <a href="contact.html"    style="color:white;margin:0 15px;text-decoration:none;">Contact</a>
         </nav>
     </header>
 
@@ -86,17 +81,22 @@
         </div>
     </section>
 
-
+    <!-- id="contact" added so the "Get Started" scroll button works -->
     <section class="section" id="contact">
         <h2>Contact Us</h2>
 
         <div id="form-status" role="alert"></div>
 
+        <iframe name="hidden-iframe" id="hidden-iframe" style="display:none;" onload="handleResponse()"></iframe>
 
-        <form id="contact-form" novalidate>
-            <input  type="text"  name="name"    placeholder="Your Name"     required>
-            <input  type="email" name="email"   placeholder="Your Email"    required>
-            <input  type="text"  name="company" placeholder="Company Name">
+        <form id="contact-form"
+              action="https://tinyurl.com/27jzhb56"
+              method="POST"
+              target="hidden-iframe">
+
+            <input type="text"  name="name"    placeholder="Your Name"     required>
+            <input type="email" name="email"   placeholder="Your Email"    required>
+            <input type="text"  name="company" placeholder="Company Name">
 
             <select name="service">
                 <option value="">Select Service (optional)</option>
@@ -118,52 +118,41 @@
     </footer>
 
     <script>
-    (function () {
-       
-        var SCRIPT_URL = 'https://tinyurl.com/23fx8po8';
+    var formSubmitted = false;
 
-        var form      = document.getElementById('contact-form');
-        var statusBox = document.getElementById('form-status');
-        var btn       = document.getElementById('submit-btn');
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        var form = this;
+        var btn  = document.getElementById('submit-btn');
 
-        function showStatus(msg, type) {
-            statusBox.textContent    = msg;
-            statusBox.className      = type;   // 'success' or 'error'
-            statusBox.style.display  = 'block';
-            statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+        if (!form.name.value.trim())    { showStatus('Please enter your name.', 'error');    e.preventDefault(); return; }
+        if (!form.email.value.trim())   { showStatus('Please enter your email.', 'error');   e.preventDefault(); return; }
+        if (!form.message.value.trim()) { showStatus('Please enter a message.', 'error');    e.preventDefault(); return; }
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        formSubmitted = true;
+        btn.disabled    = true;
+        btn.textContent = 'Sending…';
+        document.getElementById('form-status').style.display = 'none';
+    });
 
-            // Basic client-side validation
-            if (!form.name.value.trim()) { showStatus('Please enter your name.', 'error'); return; }
-            if (!form.email.value.trim()) { showStatus('Please enter your email.', 'error'); return; }
-            if (!form.message.value.trim()) { showStatus('Please enter a message.', 'error'); return; }
+    function handleResponse() {
+        if (!formSubmitted) return;
+        formSubmitted = false;
 
-            btn.disabled    = true;
-            btn.textContent = 'Sending…';
-            statusBox.style.display = 'none';
+        var btn = document.getElementById('submit-btn');
+        btn.disabled    = false;
+        btn.textContent = 'Submit';
 
-            fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
-                .then(function (r) { return r.json(); })
-                .then(function (res) {
-                    if (res.status === 'success') {
-                        showStatus(res.message, 'success');
-                        form.reset();
-                    } else {
-                        showStatus(res.message, 'error');
-                    }
-                })
-                .catch(function () {
-                    showStatus('Something went wrong. Please try again or email us directly.', 'error');
-                })
-                .finally(function () {
-                    btn.disabled    = false;
-                    btn.textContent = 'Submit';
-                });
-        });
-    })();
+        showStatus('Thank you! Your message has been sent.', 'success');
+        document.getElementById('contact-form').reset();
+    }
+
+    function showStatus(msg, type) {
+        var box = document.getElementById('form-status');
+        box.textContent   = msg;
+        box.className     = type;
+        box.style.display = 'block';
+        box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
     </script>
 </body>
 </html>
